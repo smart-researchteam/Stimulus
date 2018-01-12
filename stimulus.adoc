@@ -28,14 +28,16 @@ include::definitions.adoc[]
 :argosim: {argosimurl}[Argosim]
 :bruno: mailto:bruno.jofret@argosim.com[Bruno Jofret]
 :stimulus: https://argosim.com/product-overview/[Stimulus]
-:contact: mailto:yves.genevaux@argosim.com[Yves Genevaux]
+:contact: mailto:yves.genevaux@argosim.com[Yves Génevaux]
 //------------- end definitions --------
 
 == About...
 
+image::team.jpg[width={defaultwidth}]
+
 [horizontal]
 When:: January 10 & 11, 2018
-Who:: {fg}, {pjc}, {nz}, {jpb}, {jmb}
+Who:: {se}, {fg}, {pjc}, {nz}, {jpb}, {jmb}
 Teacher:: {bruno}
 // Responsable des ingénieurs d'application (ancien INRIA)
 Links:: {argosimurl}

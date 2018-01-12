@@ -148,6 +148,7 @@
 :rdp: Réseaux de Petri
 :scrum: link:http://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)[Scrum]
 :sd: mailto:saadia.dhouib@cea.fr[Saâdia Dhouib]
+:se: Sophie Ebersold
 :sei: http://www.sei.cmu.edu/[SEI]
 :sysmlfrance: http://www.sysml-france.fr[SysML-France]indexterm:[SysML-France]
 :tim: mailto:Tim.Weilkiens@oose.de[Tim Weilkiens]
