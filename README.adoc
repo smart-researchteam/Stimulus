@@ -1,4 +1,5 @@
 = Stimulus Tutorial
+:icons: font
 
 WARNING: Work in progress!!
 
