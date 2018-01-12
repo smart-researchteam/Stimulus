@@ -17,7 +17,7 @@ ifdef::env-github[]
 endif::[]
 //------------- end config --------
 
-= Formation Stimulus
+= Stimulus tutorial
 Jean-Michel Bruel, bruel@irit.fr, {localdate}
 
 
