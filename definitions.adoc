@@ -135,7 +135,7 @@
 :nasa: http://www.nasa.gov/[NASA]
 :nico: mailto:nicolas.belloir@univ-pau.fr[Nicolas Belloir]
 :nonne: Laurent Nonne
-:nz: Nacereddine zarour 
+:nz: Nacereddine Zarour 
 // de Constantine 2, Algérie
 :or: Olivier Roques
 :pd: mailto:Pascal.Dayre@enseeiht.fr[Pascal Dayre]

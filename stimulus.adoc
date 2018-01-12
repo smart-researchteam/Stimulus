@@ -4,8 +4,10 @@
 :experimental:
 :imagesdir: images
 :defaultwidth: 80%
+:defaultwidthmenu: 40%
 :toc: left
 :toc-title: Table des Matières
+:xrefstyle: short
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -32,36 +34,72 @@ include::definitions.adoc[]
 == About...
 
 [horizontal]
-Quand:: 10 & 11 janvier 2018
-Qui:: {fg}, {pjc}, {nz}, {jpb}, {jmb}
-Intervenant:: {bruno}, responsable des ingénieurs d'application (ancien INRIA)
-Lien pour l'outil:: {argosimurl}
-Contact commercial:: {contact}
+When:: January 10 & 11, 2018
+Who:: {fg}, {pjc}, {nz}, {jpb}, {jmb}
+Teacher:: {bruno}
+// Responsable des ingénieurs d'application (ancien INRIA)
+Links:: {argosimurl}
+Contact:: {contact}
 
 == Install
 
-. Lancer l'installer {stimulus}
-. Génerer la clef
-. Récupérer la licence
+. Launch the {stimulus} installer
+. Generate the number required for the licence
+. Send the email to get the licence
 
-== Premier pas
+WARNING: The tool requires Windows!
 
+== First steps
+
+. Launch {stimulus}
++
 //------------- img --------
-.Lancement de l'outil
+.Stimulus start page
 image::init.png[width={defaultwidth}]
 //------------- img --------
-
+. Create a new `project`
 //------------- img --------
-.Nouveau projet
+.New project
 image::project.png[width={defaultwidth}]
 //------------- img --------
-
+. Create a new `system`
++
 //------------- img --------
-.Nouveau système
+.New system
 image::system.png[width={defaultwidth}]
 //------------- img --------
+TIP: A `system` can be seen as "anything with ports (inputs/outputs)".
+. Create a new `port`, e.g., _Sensor_
++
+//------------- img --------
+.New port
+image::port.png[width={defaultwidth}]
+//------------- img --------
+. Press the btn:[Run] button image:btn-run.png[width=30]
+. Then play with the simulation pad (btn:[Simulate] buttons)
++
+//------------- img --------
+.First simulation
+image::simulate.png[width={defaultwidth}]
+//------------- img --------
+We can observe that without any constraint, `Sensors` can have any value.
+. Drag and drop the `Sensor` port on the main screen (`System`)
+. Complete the requirement to write `Sensor < 10` 
+. Add the `Sensor > 20` 
++
+//------------- img --------
+.First requirement
+image::firstreq.png[width={defaultwidth}]
+//------------- img --------
+. Repeat steps 5&6 and observe that, this time, `Sensor` is constrained by the requirement.
++
+//------------- img --------
+.The requirement is satisfied 
+image::firstreqrun.png[width={defaultwidth}]
+//------------- img --------
 
-== Principes
+
+== Basic notions
 
 - Predefined, customizable templates
 - Composition
@@ -180,10 +218,26 @@ Sémantique => utiliser l'itérateur
 
 Cf. phrase par défaut pour faire la même chose
 
-Motà 4 trous, addition, etc.
+Mots à 4 trous, addition, etc.
 
 créer des variables (pacman avec une flêche)
 
 Coverage sert à vérifier qu'on est bien passé packager tous les cas!
 
 Table 3 capteurs Nominal / Valid / Failure
+
+[appendix]
+//:numbered!:
+
+== FAQ
+
+=== How can I find a function or language construct ?
+
+Select the `Library` folder and use the seach bar.
+<<search>> illustrates the search for the `when` operator.
+
+//------------- img --------
+[[search]]
+.Lancement de l'outil
+image::recherche.png[width={defaultwidthmenu}]
+//------------- img --------
