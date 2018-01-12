@@ -6,6 +6,13 @@
 :defaultwidth: 80%
 :toc: left
 :toc-title: Table des Matières
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 //------------- end config --------
 
 = Formation Stimulus
@@ -13,7 +20,7 @@ Jean-Michel Bruel, bruel@irit.fr, {localdate}
 
 
 //------------- definitions --------
-include::../definitions.adoc[]
+include::definitions.adoc[]
 
 :argosimurl: https://argosim.com/
 :argosim: {argosimurl}[Argosim]
