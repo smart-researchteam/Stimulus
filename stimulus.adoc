@@ -1,3 +1,6 @@
+= Stimulus Tutorial
+Jean-Michel Bruel, bruel@irit.fr
+v1.0, {localdate}
 //------------- config --------
 :numbered:
 :icons: font
@@ -8,6 +11,15 @@
 :toc: left
 //:toc-title: Table des Matières
 :xrefstyle: short
+//----------- deck.js --------------
+//:navigation:
+// swiss, neon, beamer, web-2.0
+:deckjs_theme: swiss
+//fade, horizontal-slide, vertical-slide
+//:deckjs_transition: fade
+:deckjs_transition: horizontal
+:status: bottom
+//----------- GitHub --------------
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -17,9 +29,6 @@ ifdef::env-github[]
 endif::[]
 //------------- end config --------
 
-= Stimulus tutorial
-Jean-Michel Bruel, bruel@irit.fr, {localdate}
-
 
 //------------- definitions --------
 include::definitions.adoc[]
@@ -28,12 +37,12 @@ include::definitions.adoc[]
 :argosim: {argosimurl}[Argosim]
 :bruno: mailto:bruno.jofret@argosim.com[Bruno Jofret]
 :stimulus: https://argosim.com/product-overview/[Stimulus]
-:contact: mailto:yves.genevaux@argosim.com[Yves Génevaux]
+:contact: mailto:yves.genevaux@argosim.com[Yves Genevaux]
 //------------- end definitions --------
 
 == About...
 
-image::team.jpg[width={defaultwidth}]
+image::team.jpg[width={defaultwidth},scaledwidth={defaultwidth}]
 
 [horizontal]
 When:: January 10 & 11, 2018
@@ -57,32 +66,34 @@ WARNING: The tool requires Windows!
 +
 //------------- img --------
 .Stimulus start page
-image::init.png[width={defaultwidth}]
+image::init.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
+ifdef::slide[==!]
 . Create a new `project`
 //------------- img --------
 .New project
-image::project.png[width={defaultwidth}]
+image::project.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
+ifdef::slide[==!]
 . Create a new `system`
 +
 //------------- img --------
 .New system
-image::system.png[width={defaultwidth}]
+image::system.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 TIP: A `system` can be seen as "anything with ports (inputs/outputs)".
 . Create a new `port`, e.g., _Sensor_
 +
 //------------- img --------
 .New port
-image::port.png[width={defaultwidth}]
+image::port.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 . Press the btn:[Run] button image:btn-run.png[width=30]
 . Then play with the simulation pad (btn:[Simulate] buttons)
 +
 //------------- img --------
 .First simulation
-image::simulate.png[width={defaultwidth}]
+image::simulate.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 We can observe that without any constraint, `Sensors` can have any value.
 . Drag and drop the `Sensor` port on the main screen (`System`)
@@ -91,13 +102,13 @@ We can observe that without any constraint, `Sensors` can have any value.
 +
 //------------- img --------
 .First requirement
-image::firstreq.png[width={defaultwidth}]
+image::firstreq.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 . Repeat steps 5&6 and observe that, this time, `Sensor` is constrained by the requirement.
 +
 //------------- img --------
 .The requirement is satisfied 
-image::firstreqrun.png[width={defaultwidth}]
+image::firstreqrun.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 
 //================== end of polishing by JMB =================/
@@ -195,7 +206,7 @@ En fin il reste des "trous" mais c'est normal de laisser un peu de liberté, sur
 
 //------------- img --------
 .Et maintenant... les tests!
-image::TestEnvironment.png[width={defaultwidth}]
+image::TestEnvironment.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 
 
@@ -235,6 +246,10 @@ Table 3 capteurs Nominal / Valid / Failure
 
 == FAQ
 
+=== Where can I find more material ?
+
+https://www.argosim.com/free-trial/
+
 === How can I find a function or language construct ?
 
 Select the `Library` folder and use the seach bar.
@@ -243,5 +258,5 @@ Select the `Library` folder and use the seach bar.
 //------------- img --------
 [[search]]
 .Lancement de l'outil
-image::recherche.png[width={defaultwidthmenu}]
+image::recherche.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 //------------- img --------
