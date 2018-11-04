@@ -1,0 +1,174 @@
+
+[{intro}]
+== Requirements
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== First requirement
+
+ifndef::slides[]
+From here, we can write requirements to describe the behaviour of the system. 
+To help you with this task, a standard library of sentence templates is provided with {stimulus}. 
+To display the standard library navigation tree, click on the btn:[Libraries] tab on top of the project navigation panel. 
+If the library is not available, open it by choosing menu:File[Open Standard Library > Stdlib] in the menu. 
+The library is then displayed as shown in <<library>>. 
+All the items of the library are organised into packages.
+endif::slides[]
+
+//------------- img --------
+[[library]]
+ifndef::slides[.Standard library navigation tree]
+image::{stimulusVersion}/libraries.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+
+ifndef::slides[]
+To build a sentence from a library item, drag and drop it into the system's panel as shown in <<drag>>. 
+In this example, we use the menu:Logical[InRange > #[min;max]] pattern. 
+A sentence with gaps appears in the system's panel.
+endif::slides[]
+
+ifdef::slides[=== !]
+
+//------------- img --------
+[[drag]]
+ifndef::slides[.Add a library item to a system]
+image::{stimulusVersion}/drag.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+TIP: {stimulus} allows you to modify its syntax, also known as `Format`, by opening its contextual menu and choosing menu:Format[x shall be in range...].
+
+To complete the sentence, we need to fill in the gaps. 
+To do so, drag and drop the port of the system directly into the first gap (see <<actuator>>).
+endif::slides[]
+
+//------------- img --------
+[[actuator]]
+ifndef::slides[.Fill in a gap with a system port]
+image::{stimulusVersion}/actuator.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+ifndef::slides[]
+Finally, fill in the remaining gaps to get your first complete requirement.
+endif::slides[]
+
+[{topic}]
+=== First simulation
+
+ifndef::slides[]
+Start a new simulation by clicking the btn:[Play] button (image:btn-run.png[width=30]). 
+We observe in <<simu2>> that all values of `actuator` stay between `0` and `10`, satisfying the requirement. 
+endif::slides[]
+
+//------------- img --------
+[[simu2]]
+ifndef::slides[.Simulation of the first requirement]
+image::{stimulusVersion}/simu2.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+Performing another simulation will generate a new behaviour which also satisfies the requirement.
+endif::slides[]
+
+[{topic}]
+=== Real-time requirement & simulation
+
+ifndef::slides[]
+{stimulus} allows you to write real-time requirements, that constrain the system behaviour at some specific time instants or time periods. 
+The `Temporal` library package provides templates to write such requirements.
+Let us write a new requirement using the menu:Temporal[When] template as shown in <<temporal>>. 
+It applies the `<BODY>` constraint when the `condition` is true.
+
+To fill the gaps, open the `Logical` library package, drag and drop the `=` into the `condition` and the `>=` into the `<BODY>` as shown in <<temporal>>. 
+You can notice that combining sentence templates allows you to write complex requirements.
+endif::slides[]
+
+//------------- img --------
+[[temporal]]
+ifndef::slides[.Add a `When` requirement]
+image::{stimulusVersion}/temporal.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+Finally, create a new port `sensor` in the same way as you did for the port `actuator`. 
+Drag and drop the new port `sensor` to `v1` double click on `v2` and type `true`. 
+Drag and drop the port `actuator` to `x`, double click on `y` and type `5` to complete the requirement with ports and values.
+
+Launch the simulation by clicking the btn:[Play] button (image:btn-run.png[width=30]). 
+The plot window in <<temporalsim>> shows two curves: the green curve for the `sensor` and the orange one for the `actuator`. 
+Since {stimulus} has inferred that the `sensor` is a Boolean input and no constraint applies, it generates random values.
+The orange curve shows the behaviour of the actuator. 
+Depending on the value of the `sensor` input, the requirement `actuator >= 5` will apply or not. 
+When it applies, {stimulus} will solve this requirement together with the first one, therefore will generate values between 5 and 10. 
+When `sensor` is false, it only satisfies the first requirement.
+endif::slides[]
+
+ifdef::slides[=== !]
+
+//------------- img --------
+[[temporalsim]]
+ifndef::slides[.Simulate two real-time requirements]
+image::{stimulusVersion}/temporalsim.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+TIP: You can select the values shown in the simulation. 
+In <<temporalsim2>>, the condition has been deselected for example.
+endif::slides[]
+
+ifdef::slides[=== !]
+
+//------------- img --------
+[[temporalsim2]]
+ifndef::slides[.Simulate two real-time requirements]
+image::{stimulusVersion}/temporalsim2.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+[{topic}]
+=== Analysis of the simulation
+
+ifndef::slides[]
+In the last section, we have seen how to build requirements and simulate them. 
+{stimulus} also provides you more ways to analyse your system requirements during simulation.
+
+To illustrate the highlight feature, let us take a closer look at the simulation of the previous system. In the top part of the window, requirements are highlighted as in <<highlighted>> to indicate which constraint is active at a given step of the simulation.
+endif::slides[]
+
+//------------- img --------
+[[highlighted]]
+ifndef::slides[.Highlighted requirements]
+image::{stimulusVersion}/highlighted.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+The selected step is given by a vertical dotted line as shown in <<temporalsim2>>. 
+The step number is displayed in the `Current step` text field (16 in this example). 
+You can select the current step either by clicking in the simulation window or by typing a specific step number into the `Current step` text field.
+
+Going back to <<highlighted>>, constraints that are highlighted in solid gray are not active: at the selected step, `sensor` is false, therefore the condition in the `When` statement is not verified and the constraint is not active. 
+As a consequence, the value of `actuator` is still chosen between 0 and 10 but is not forced to be greater than or equal to 5.
+
+Let us see what happens when adding the third requirement as shown in <<third>>. 
+endif::slides[]
+
+//------------- img --------
+[[third]]
+ifndef::slides[.Requirement using time]
+image::{stimulusVersion}/third.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+To edit it, use the menu:Temporal[AfterPeriod] and the menu:Logical[<] provided in the standard library.
+At simulation time, the execution stops, a red vertical line appears and an error message is added to the log panel at the bottom of the window, see <<thirdsim>>. 
+It shows a so-called conflict, which happens when at least two requirements are contradictory.
+endif::slides[]
+
+//------------- img --------
+[[thirdsim]]
+ifndef::slides[.Simulation with a conflict]
+image::{stimulusVersion}/thirdsim.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+Moreover, by clicking on the links provided in the error message, you are able to get to the faulty requirements.
+endif::slides[]
+
+ifdef::slides[=== Question ?!]
+
+IMPORTANT: Question: Could you explain the error?
+
+ifdef::slides[:leveloffset: 0]

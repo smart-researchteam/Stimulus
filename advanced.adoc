@@ -1,0 +1,44 @@
+
+ifndef::slides[]
+//==========================
+[[advanced]]
+[{intro}] 
+== Advanced notions
+
+Work in progress...
+
+/////
+[{topic}]
+=== Notes
+
+[WARNING]
+=====
+- Que du fonctionnel temps réel.
+- Arrêt au premier conflit
+- Les énumérés sont +'EXEMPLE+
+- Par "Système" il faut comprendre "fonction"
+- Tout ce qui n'est pas interdit est autorisé
+=====
+/////
+
+[{topic}]
+=== Glossaries
+
+//Manip d'ajouter le glossaire, de générer les ports à partir des glossaires et inversement
+
+You can host the main definitions in a `Glossary`.
+To start one, click on menu:New[glossary]
+
+You can add the Glossary to the `Interface` (by dragging the glossary close to the little `+` close to `Glossaries`) and then add the ports to your glossary by a clicking on them (see <<glossary>>).
+
+//------------- img --------
+[[glossary]]
+ifndef::slides[.Adding ports to a glossary]
+image::{stimulusVersion}/glossary.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+TIP: It can be a good idea to start with the glossary
+
+//TIP: btn:[clickDroit] menu:Layout[Multiline] (ou CTRL+N)
+
+endif::slides[]

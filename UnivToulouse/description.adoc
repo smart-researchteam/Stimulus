@@ -1,0 +1,20 @@
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== LGS big picture
+
+//------------- img --------
+ifndef::slides[.LGS levels]
+image::lgs-levels.png[width=50%,scaledwidth=50%]
+
+ifdef::slides[=== LGS big picture]
+
+//------------- img --------
+ifndef::slides[.LGS levels as SysML Packages]
+image::lgs-levels-org.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+
+
+ifdef::slides[:leveloffset: 0]

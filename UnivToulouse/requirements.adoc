@@ -1,0 +1,130 @@
+
+[{topic}]
+=== Drag and drop the `Sensor` port on the main screen (`System`)
+
+[{topic}]
+=== Complete the requirement to write `Sensor < 10` 
+
+[{topic}]
+=== Add the `Sensor > 20` 
+
+//------------- img --------
+ifndef::slides[.First requirement]
+image::firstreq.png[width={defaultwidth},scaledwidth={defaultwidth}]
+//------------- img --------
+
+[{topic}]
+=== Repeat steps 5&6 and observe that, this time, `Sensor` is constrained by the requirement.
+
+//------------- img --------
+ifndef::slides[.The requirement is satisfied]
+image::firstreqrun.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::slides[:leveloffset: 0]
+
+[{topic}]
+== Correction de la porte
+
+Exigences de safety. 
+
+Exemple :
+
+.....
+when sensor is 'SOMEBODY, Door shall not be 'CLOSED
+.....
+
+
+[{topic}]
+== Créer un observateur
+
+Ajouter un "paragraphe"
+
+[{topic}]
+== Reprendre les exigences initiales
+
+Safety violée => scénario
+
+TIP: Cf. "SlidingDoors" qui vient à l'install.
+
+[{topic}]
+== Editeur
+
+Complétion : CTRL+<space>
+
+[{topic}]
+== Automates
+
+Automates forts => affablir les transitions (bouton droit)
+
+WARNING: Dérivée penser à [1/second]
+
+//menu:Simulation[Multiple Runs]
+
+Transitions probabilistes => poids
+
+Exemple de l'automate A -> B -> C
+
+[{topic}]
+== Scenarios
+
+. Créer un nouveau package (`Test` par Exemple)
+. système 'Context'
+. Block diagram
+. Régler les pbs de ports
+. Ajouter un nouveau systeme pour connecter les entrées (2 scénarios en fait, un par port d'entrée)
+. Contraindre les valeurs des sorties dans les scénarios
+
+TIP: On fait les 4 jusqu'à ce qu'on en ai plus à traiter et qu'on s'apperçoive qu'on a toujours le clignotement
+
+En fait le Afterwards ne portait que sur "turn on" du mode Auto!!
+
+Donc on reprend et on enlève le >=70% pour le mettre dans un if en entrée du Do
+
+En fin il reste des "trous" mais c'est normal de laisser un peu de liberté, surtout qu'on est en train de raisonner sur un scénario en particulier.
+
+
+[{topic}]
+== Les tests
+
+//------------- img --------
+ifndef::slides[.Et maintenant... les tests!]
+image::TestEnvironment.png[width={defaultwidth},scaledwidth={defaultwidth}]
+//------------- img --------
+
+
+Colonne supplémentaires dans le Glossaire pour donner les valeurs des enums.
+(Enum Encoding)
+
+
+On ajoute un paragraphe
+on met le controlleur dedans
+//on passe le paragraphe à Observer (btn:[ClickDroit] menu:Mode[Observer])
+
+Possibilité de jouer tous les tests => suite de test
+(Attention, nécessite d'activer la licence qui va bien.)
+
+[{topic}]
+== Solveur
+
+SEND + MORE = MONEY
+
+[{topic}]
+== Remplacer les iterateurs etc. pzar des phrases
+
+créer un système
+les ports sont les paramètres
+Sémantique => utiliser l'itérateur
+
+Cf. phrase par défaut pour faire la même chose
+
+Mots à 4 trous, addition, etc.
+
+créer des variables (pacman avec une flêche)
+
+Coverage sert à vérifier qu'on est bien passé packager tous les cas!
+
+Table 3 capteurs Nominal / Valid / Failure
+
+ifndef::slides[]
+
+:leveloffset: 0

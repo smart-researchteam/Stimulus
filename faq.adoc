@@ -1,0 +1,41 @@
+
+ifndef::slides[]
+[[faq]]
+[{topic}]
+== FAQ
+
+[{topic}]
+=== Where can I find more material ?
+
+https://www.argosim.com/free-trial/
+
+[[sec:simulation]]
+[{topic}]
+=== What are the different simulation parameters ?
+
+//------------- img --------
+ifndef::slides[.SimulationBar]
+image::{stimulusVersion}/simulationBar.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+- The btn:[simulate one step] button performs one simulation step in the plot window.
+- The btn:[fast forward button] performs N simulation steps. 
+The number of steps is defined by the field at the right of the button.
+- The btn:[reset button] starts a new simulation. 
+When the btn:[Clear on reset] checkbox is unchecked, the next simulation will be overlaid on the previous one.
+- The btn:[Period] label displays the simulation sampling period. 
+You can change this setting before a simulation in the btn:[Properties] panel of your system. 
+Insert a simulation period using a dimension (e.g., _1 [second]_ or _10 [millisecond]_).
+
+[{topic}]
+=== How can I find a function or language construct ?
+
+Select the `Library` folder and use the seach bar.
+<<search>> illustrates the search for the `when` operator.
+
+//------------- img --------
+[[search]]
+ifndef::slides[.Search tool]
+image::recherche.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+//------------- img --------
+
+endif::slides[]

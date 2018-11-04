@@ -1,0 +1,25 @@
+
+ifndef::slides[]
+[[basics]]
+[{intro}] 
+== Basic notions
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== Predefined, customizable templates
+
+[{topic}]
+=== Composition
+// When porte sur des conditions bolléenne
+
+[{topic}]
+=== Refinement of requirement 
+//(from system to subsystems) => block diagram
+
+[{topic}]
+=== Observers
+ 
+High level requirements can be transformed as `observers`.
+
+endif::slides[]

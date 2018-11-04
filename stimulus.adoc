@@ -1,4 +1,4 @@
-= Stimulus Tutorial
+= *Stimulus* Tutorial
 Jean-Michel Bruel, bruel@irit.fr
 v1.0, {localdate}
 //------------- config --------
@@ -11,14 +11,30 @@ v1.0, {localdate}
 :toc: left
 //:toc-title: Table des Matières
 :xrefstyle: short
-//----------- deck.js --------------
-//:navigation:
-// swiss, neon, beamer, web-2.0
-:deckjs_theme: swiss
-//fade, horizontal-slide, vertical-slide
-//:deckjs_transition: fade
-:deckjs_transition: horizontal
-:status: bottom
+//--------------------- slides
+ifdef::slides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+endif::slides[]
+ifndef::slides[]
+:topic: 
+:intro: 
+:statement: 
+:incremental: 
+:source: 
+endif::slides[]
+
 //----------- GitHub --------------
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -27,22 +43,30 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
-//------------- end config --------
-
 
 //------------- definitions --------
 include::definitions.adoc[]
-
 :argosimurl: https://argosim.com/
 :argosim: {argosimurl}[Argosim]
 :bruno: mailto:bruno.jofret@argosim.com[Bruno Jofret]
 :stimulus: https://argosim.com/product-overview/[Stimulus]
 :contact: mailto:yves.genevaux@argosim.com[Yves Genevaux]
+:tutorialURL: https://download.argosim.com/index.php/s/5ZszF09tl0rd4gv/download
+
 //------------- end definitions --------
 
-== About...
+//==========================
+[{intro}] 
+== Context
+
+ifndef::slides[:leveloffset: +1]
+
+[{topic}]
+== About this tutorial
 
 image::team.jpg[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
 
 [horizontal]
 When:: January 10 & 11, 2018
@@ -52,7 +76,10 @@ Teacher:: {bruno}
 Links:: {argosimurl}
 Contact:: {contact}
 
-== Install
+endif::slides[]
+
+[{topic}]
+== Installation and requirements
 
 . Launch the {stimulus} installer
 . Generate the number required for the licence
@@ -60,71 +87,114 @@ Contact:: {contact}
 
 WARNING: The tool requires Windows!
 
+ifndef::slides[:leveloffset: 0]
+
+//==========================
+[{intro}] 
 == First steps
 
-. Launch {stimulus}
-+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== Launch Stimulus
+
 //------------- img --------
-.Stimulus start page
+ifndef::slides[.Stimulus start page]
 image::init.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+=== Create a new `project`
+
 //------------- img --------
-ifdef::slide[==!]
-. Create a new `project`
-//------------- img --------
-.New project
+ifndef::slides[.New project]
 image::project.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+=== Create a new `system`
+
 //------------- img --------
-ifdef::slide[==!]
-. Create a new `system`
-+
-//------------- img --------
-.New system
+ifndef::slides[.New system]
 image::system.png[width={defaultwidth},scaledwidth={defaultwidth}]
-//------------- img --------
+
 TIP: A `system` can be seen as "anything with ports (inputs/outputs)".
-. Create a new `port`, e.g., _Sensor_
-+
+
+[{topic}]
+=== Create a new `port`, e.g., _Sensor_
+
 //------------- img --------
-.New port
+ifndef::slides[.New port]
 image::port.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+=== Press the Run button 
+
 //------------- img --------
-. Press the btn:[Run] button image:btn-run.png[width=30]
-. Then play with the simulation pad (btn:[Simulate] buttons)
-+
+ifndef::slides[.Run button]
+image::btn-run.png[width=10%,scaledwidth=10%]
+
+[{topic}]
+=== Then play with the simulation pad (Simulate buttons)
+
 //------------- img --------
-.First simulation
+ifndef::slides[.First simulation]
 image::simulate.png[width={defaultwidth},scaledwidth={defaultwidth}]
-//------------- img --------
+
 We can observe that without any constraint, `Sensors` can have any value.
-. Drag and drop the `Sensor` port on the main screen (`System`)
-. Complete the requirement to write `Sensor < 10` 
-. Add the `Sensor > 20` 
-+
+
+[{topic}]
+=== Drag and drop the `Sensor` port on the main screen (`System`)
+
+[{topic}]
+=== Complete the requirement to write `Sensor < 10` 
+
+[{topic}]
+=== Add the `Sensor > 20` 
+
 //------------- img --------
-.First requirement
+ifndef::slides[.First requirement]
 image::firstreq.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
-. Repeat steps 5&6 and observe that, this time, `Sensor` is constrained by the requirement.
-+
+
+[{topic}]
+=== Repeat steps 5&6 and observe that, this time, `Sensor` is constrained by the requirement.
+
 //------------- img --------
-.The requirement is satisfied 
+ifndef::slides[.The requirement is satisfied]
 image::firstreqrun.png[width={defaultwidth},scaledwidth={defaultwidth}]
-//------------- img --------
 
-//================== end of polishing by JMB =================/
+ifdef::slides[:leveloffset: 0]
 
+//==========================
+[{intro}] 
 == Basic notions
 
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
 === Predefined, customizable templates
+
+[{topic}]
 === Composition
 // When porte sur des conditions bolléenne
+
+[{topic}]
 === Requirements / Scenarios
+
+[{topic}]
 === Refinment of requirement 
 (from system to subsystems) => block diagram
 
 TIP: High level requirements can be transformed as observers.
 
+ifdef::slides[:leveloffset: 0]
 
+//==========================
+[{intro}] 
+== Advanced notions
+
+ifndef::slides[:leveloffset: +1]
+
+[{topic}]
 == Notes
 
 [WARNING]
@@ -136,17 +206,19 @@ TIP: High level requirements can be transformed as observers.
 - Tout ce qui n'est pas interdit est autorisé
 =====
 
+[{topic}]
 == Glossaries
 
-- Click on menu:New[glossary]
+//- Click on menu:New[glossary]
 
 Manip d'ajouter le glossaire, de générer les ports à partir des glossaires et inversement
 Changer les couleurs
 
 TIP: Commencer par les glossaires
 
-TIP: btn:[clickDroit] menu:Layout[Multiline] (ou CTRL+N)
+//TIP: btn:[clickDroit] menu:Layout[Multiline] (ou CTRL+N)
 
+[{topic}]
 == Correction de la porte
 
 Exigences de safety. 
@@ -158,32 +230,37 @@ when sensor is 'SOMEBODY, Door shall not be 'CLOSED
 .....
 
 
+[{topic}]
 == Créer un observateur
 
 Ajouter un "paragraphe"
 
+[{topic}]
 == Reprendre les exigences initiales
 
 Safety violée => scénario
 
 TIP: Cf. "SlidingDoors" qui vient à l'install.
 
+[{topic}]
 == Editeur
 
 Complétion : CTRL+<space>
 
+[{topic}]
 == Automates
 
 Automates forts => affablir les transitions (bouton droit)
 
 WARNING: Dérivée penser à [1/second]
 
-menu:Simulation[Multiple Runs]
+//menu:Simulation[Multiple Runs]
 
 Transitions probabilistes => poids
 
 Exemple de l'automate A -> B -> C
 
+[{topic}]
 == Scenarios
 
 . Créer un nouveau package (`Test` par Exemple)
@@ -202,10 +279,11 @@ Donc on reprend et on enlève le >=70% pour le mettre dans un if en entrée du D
 En fin il reste des "trous" mais c'est normal de laisser un peu de liberté, surtout qu'on est en train de raisonner sur un scénario en particulier.
 
 
+[{topic}]
 == Les tests
 
 //------------- img --------
-.Et maintenant... les tests!
+ifndef::slides[.Et maintenant... les tests!]
 image::TestEnvironment.png[width={defaultwidth},scaledwidth={defaultwidth}]
 //------------- img --------
 
@@ -216,15 +294,17 @@ Colonne supplémentaires dans le Glossaire pour donner les valeurs des enums.
 
 On ajoute un paragraphe
 on met le controlleur dedans
-on passe le paragraphe à Observer (btn:[ClickDroit] menu:Mode[Observer])
+//on passe le paragraphe à Observer (btn:[ClickDroit] menu:Mode[Observer])
 
 Possibilité de jouer tous les tests => suite de test
 (Attention, nécessite d'activer la licence qui va bien.)
 
+[{topic}]
 == Solveur
 
 SEND + MORE = MONEY
 
+[{topic}]
 == Remplacer les iterateurs etc. pzar des phrases
 
 créer un système
@@ -241,15 +321,21 @@ Coverage sert à vérifier qu'on est bien passé packager tous les cas!
 
 Table 3 capteurs Nominal / Valid / Failure
 
-[appendix]
-//:numbered!:
+ifndef::slides[]
 
+:leveloffset: 0
+
+[{topic}]
 == FAQ
 
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
 === Where can I find more material ?
 
 https://www.argosim.com/free-trial/
 
+[{topic}]
 === How can I find a function or language construct ?
 
 Select the `Library` folder and use the seach bar.
@@ -257,6 +343,8 @@ Select the `Library` folder and use the seach bar.
 
 //------------- img --------
 [[search]]
-.Lancement de l'outil
+.Outil de recherche
 image::recherche.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 //------------- img --------
+
+endif::slides[]

@@ -1,0 +1,16 @@
+[{topic}]
+== About this tutorial
+
+image::team.jpg[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+
+[horizontal]
+When:: January 10 & 11, 2018
+Who:: {se}, {fg}, {pjc}, {nz}, {jpb}, {jmb}
+Teacher:: {bruno}
+// Responsable des ingénieurs d'application (ancien INRIA)
+Links:: {argosimurl}
+Contact:: {contact}
+
+endif::slides[]

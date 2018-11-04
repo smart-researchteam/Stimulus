@@ -1,0 +1,4 @@
+[{topic}]
+== About this tutorial
+
+This tutorial is based on the **L**anding **G**ear **S**ystem (LGS) case study, initiated in 2014 by Frédéric Boniol and Virginie Wiels for comparing modeling approaches.

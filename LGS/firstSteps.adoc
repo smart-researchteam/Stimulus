@@ -1,0 +1,132 @@
+//==========================
+[{intro}] 
+== First steps
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== Launch Stimulus
+
+//------------- img --------
+ifndef::slides[.Stimulus start page]
+image::{stimulusVersion}/init.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+=== Create a new `project`
+
+ifndef::slides[]
+
+The first step is to create a new project.
+To do so, Click the btn:[New project] located in
+the toolbar or open the menu:File[] and select `New Project`. 
+A pop-up window appears to configure basic project properties, as shown in <<newp>>.
+
+Name your project `{caseStudy}`, for example.
+
+endif::slides[]
+
+//------------- img --------
+[[newp]]
+ifndef::slides[.New project]
+image::{stimulusVersion}/project.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+
+TIP:  You can set the project name in the `Name` field, and define your working directory in the `Location` field. 
+Then click btn:[OK] to finish. 
+Your project now appears in the `Projects` tab as shown in <<editor>>. 
+The project tree will allow you to manage your project models just like a file system would do.
+endif::slides[]
+
+ifdef::slides[=== !]
+
+//------------- img --------
+[[editor]]
+ifndef::slides[.New project in the `Projects` tab]
+image::{stimulusVersion}/editor.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+[{topic}]
+=== Create a new `package`
+
+ifndef::slides[]
+Projects can be organised hierarchically with `packages`, that contain editable model elements such as requirements, glossaries, etc. 
+To create a package, select the parent directory or package in your project tree (the `src` forlder), then open the main menu:File[New > Package] as shown in <<pack>>. 
+
+TIP: As a rule in {stimulus}, you can also right-click to perform the same action from the contextual menu. 
+
+When created, the new package is selected and editable, which allows you to rename it. 
+If you want to rename it later, you need to select it by clicking on it, then clicking again after a short delay to make it editable.
+endif::slides[]
+
+//------------- img --------
+[[pack]]
+ifndef::slides[.New package]
+image::{stimulusVersion}/package.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+[{topic}]
+=== Create a new `system`
+
+ifndef::slides[]
+To add a system into the newly created package, select it and choose menu:File[New > System] in the menu (see <<system>>).
+endif::slides[]
+
+//------------- img --------
+[[system]]
+ifndef::slides[.New system]
+image::{stimulusVersion}/system.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+TIP: A `system` can be seen as "anything with ports (inputs/outputs)".
+
+[{topic}]
+=== Create a new `port`
+
+ifndef::slides[]
+Once the system is created, you can define the interface with its environment by declaring a list of
+named ports (Input and output signals). 
+To declare a port, click the btn:[plus shaped] next to the ports label in the `Interface` panel on the right side of the window. 
+A new port appears in the corresponding section that can be renamed as shown in <<port>>.
+endif::slides[]
+
+//------------- img --------
+[[port]]
+ifndef::slides[.New port]
+image::{stimulusVersion}/port.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+[{topic}]
+=== Perform your first simulation
+ 
+ifndef::slides[]
+Your newly created system is ready for simulation, even if it is still empty! 
+To launch the simulation of a selected system tab, press the btn:[Play] button (image:btn-run.png[width=30]). 
+The Simulation screen appears on the lowest part of the window (see <<play>>).
+endif::slides[]
+
+//------------- img --------
+[[play]]
+ifndef::slides[.Simulation view]
+image::{stimulusVersion}/play.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+TIP: To have a better view on the simulation, you can "detach" the panel from the tool, by right-clicking on the panel and select menu:Undock[].
+endif::slides[]
+
+[{topic}]
+=== Then play with the simulation pad (Simulate buttons)
+
+ifndef::slides[]
+You can play with the simulation interface (e.g., <<simulation>>), or if you want to learn the simulation interface, go to <<sec:simulation>>.
+endif::slides[]
+
+//------------- img --------
+[[simulation]]
+ifndef::slides[.First simulation]
+image::{stimulusVersion}/simulation.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+NOTE: Since there is no specified requirement in this system, {stimulus} will choose a random value within the range of possible values. 
+Moreover, since no data type has been specified for the port, then {stimulus} will assume a numeric type and it will choose a value between minus infinity and plus infinity.
+endif::slides[]
+
+ifdef::slides[:leveloffset: 0]

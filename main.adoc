@@ -1,0 +1,111 @@
+:caseStudy: QuickStartGuide
+// Other case studies: UnivToulouse, LGS => Change title and versions accordingly
+:caseStudyTitle: Quick Start Guide
+:stimulusVersion: 2018.09.1
+= *Stimulus* Tutorial: {caseStudyTitle}
+Jean-Michel Bruel, bruel@irit.fr
+v1.0, {localdate}
+//------------- config --------
+:numbered:
+:icons: font
+:experimental:
+:imagesdir: images
+:defaultwidth: 80%
+:defaultwidthmenu: 40%
+:toc: left
+//:toc-title: Table des Matières
+:xrefstyle: short
+:caution-caption: pass:[&#128161;]
+//--------------------- slides
+ifdef::slides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+endif::slides[]
+ifndef::slides[]
+:topic: 
+:intro: 
+:statement: 
+:incremental: 
+:source: 
+endif::slides[]
+
+//----------- GitHub --------------
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+//------------- definitions --------
+include::definitions.adoc[]
+:argosimurl: https://argosim.com/
+:argosim: {argosimurl}[Argosim]
+:bruno: mailto:bruno.jofret@argosim.com[Bruno Jofret]
+:stimulus: https://argosim.com/product-overview/[Stimulus]
+:contact: mailto:yves.genevaux@argosim.com[Yves Genevaux]
+:tutorialURL: https://download.argosim.com/index.php/s/5ZszF09tl0rd4gv/download
+
+//------------- end definitions --------
+
+ifndef::slides[]
+
+In this document you will find:
+
+- the explanation of its context in <<context>>, 
+- the detailed explanation of the case study which starts in <<caseStudy>>,
+- some explanations on some basic features of {stimulus} in <<basics>>, and
+- some explanations on some advanced features of {stimulus} in <<advanced>>.
+
+TIP: A **F**requently **A**sked **Q**uestions (FAQ) is also available in <<faq>>.
+
+endif::slides[]
+
+//==========================
+[[context]]
+[{intro}] 
+== Context
+
+ifndef::slides[:leveloffset: +1]
+
+include::{caseStudy}/context.adoc[]
+
+[{topic}]
+== Installation and requirements
+
+NOTE: This tutorial use the version `{stimulusVersion}` of {stimulus}.
+
+. Launch the {stimulus} installer
+. Generate the number required for the licence
+. Send the email as required in order to get the licence file
+
+WARNING: The tool requires Windows! And no virtual machines allowed.
+
+ifndef::slides[:leveloffset: 0]
+
+//==========================
+[[caseStudy]]
+[{intro}] 
+== Case study
+
+include::{caseStudy}/description.adoc[]
+include::{caseStudy}/firstSteps.adoc[]
+include::{caseStudy}/requirements.adoc[]
+
+//==========================
+include::basics.adoc[]
+include::advanced.adoc[]
+
+include::faq.adoc[]
