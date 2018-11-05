@@ -1,0 +1,31 @@
+
+[{topic}]
+ifdef::uk[== About this tutorial]
+ifdef::fr[== À propos de ce tutoriel]
+ifdef::uk[]
+This tutorial is based on the official one from {argosim} and available here: {tutorialURL}.
+
+This tutorial will present:
+
+* methodology guidelines ;
+* how to create and use glossaries ;
+* how to write complex requirements ;
+* debug complex requirements ;
+* how to write scenarios to generate inputs ;
+* how to turn requirements into Observers.
+
+All of that will be presented along a concrete system example: an automatic door controller.
+endif::[]
+ifdef::fr[]
+Ce tutoriel est basé sur le tutoriel officiel (en anglais) d'{argosim} et disponible ici : {tutorialURL}.
+
+Il va permettre d'aborder :
+
+* des aspects méthodologiques et organisationnels ;
+* comment créer et utiliser des glossaires ;
+* comment écrire des exigences complexes ;
+* comment les debugger ;
+* comment écrire des scénarios pour générer des _inputs_ ;
+* comment transformer les exigences en _Observers_.
+
+endif::[]

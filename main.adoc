@@ -13,7 +13,7 @@ v1.0, {localdate}
 :defaultwidth: 80%
 :defaultwidthmenu: 40%
 :toc: left
-//:toc-title: Table des Matières
+ifdef::fr[:toc-title: Table des Matières]
 :xrefstyle: short
 :caution-caption: pass:[&#128161;]
 //--------------------- slides
@@ -62,6 +62,7 @@ include::definitions.adoc[]
 
 ifndef::slides[]
 
+ifdef::uk[]
 In this document you will find:
 
 - the explanation of its context in <<context>>, 
@@ -70,18 +71,32 @@ In this document you will find:
 - some explanations on some advanced features of {stimulus} in <<advanced>>.
 
 TIP: A **F**requently **A**sked **Q**uestions (FAQ) is also available in <<faq>>.
+endif::[]
+
+ifdef::fr[]
+Dans ce document vous trouverez:
+
+- son contexte en <<context>>, 
+- une étude de cas commençant en <<caseStudy>>,
+- des explications sur les éléments de base de {stimulus} en <<basics>> (uniquement en anglais pour l'instant), et
+- des explications sur les éléments avancés de {stimulus} en <<advanced>> (uniquement en anglais pour l'instant).
+
+TIP: Une **F**oire **A**ux **Q**uestions (FAQ) est disponible en <<faq>> (uniquement en anglais pour l'instant).
+endif::[]
 
 endif::slides[]
 
 //==========================
 [[context]]
 [{intro}] 
-== Context
+ifdef::uk[== Context]
+ifdef::fr[== Contexte]
 
 ifndef::slides[:leveloffset: +1]
 
 include::{caseStudy}/context.adoc[]
 
+ifdef::uk[]
 [{topic}]
 == Installation and requirements
 
@@ -92,13 +107,28 @@ NOTE: This tutorial use the version `{stimulusVersion}` of {stimulus}.
 . Send the email as required in order to get the licence file
 
 WARNING: The tool requires Windows! And no virtual machines allowed.
+endif::[]
+
+ifdef::fr[]
+[{topic}]
+== Installation et contraintes
+
+NOTE: Ce tutoriel utilise la version `{stimulusVersion}` de {stimulus}.
+
+. Lancer l'installeur {stimulus}
+. Générer le nombre requis pour obtenir la licence
+. L'envoyer par email pour obtenir le fichier de licence
+
+WARNING: L'outil nécessite Windows! Et les machines virtuelles ne sont pas autorisées.
+endif::[]
 
 ifndef::slides[:leveloffset: 0]
 
 //==========================
 [[caseStudy]]
 [{intro}] 
-== Case study
+ifdef::uk[== Case study]
+ifdef::fr[== Étude de cas]
 
 include::{caseStudy}/description.adoc[]
 include::{caseStudy}/firstSteps.adoc[]

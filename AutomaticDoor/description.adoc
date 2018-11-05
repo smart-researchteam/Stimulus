@@ -1,0 +1,25 @@
+
+ifdef::slides[:leveloffset: -1]
+
+[[description]]
+[{topic}]
+=== Description
+
+ifdef::uk[]
+We will consider an automatic door system similar to the one at the entrance to your favourite mall. 
+The informal specification is given by the picture in <<chronogram>>. 
+Depending on the value of some sensor, indicating if someone or nobody is detected, the door shall be open or closed.
+endif::[]
+
+ifdef::fr[]
+Nous allons modéliser une porte automatique (type supermarché) dont le comportement peut être modélisé par le chronogramme illustré en <<chronogram>>. 
+Le capteur (`sensor`), indique selon que quelqu'un (`someone`) ou non (`nobody`) est détecté et si la porte doit alors être ouverte (`open`) ou fermée (`closed`).
+endif::[]
+
+//------------- img --------
+[[chronogram]]
+ifndef::slides+uk[.Automatic door chronogram]
+ifndef::slides+fr[.Chronogramme de la porte automatique]
+image::chronogram.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::slides[:leveloffset: 0]

@@ -1,0 +1,294 @@
+
+[{intro}]
+ifdef::uk[== Requirements]
+ifdef::fr[== Exigences] 
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+ifdef::uk[=== Using the Glossary]
+ifdef::fr[=== Utilisation du Glossaire]
+
+ifndef::slides[]
+
+ifdef::uk[]
+To create the first requirement of our automatic door system:
+
+* Click to select "Requirements" package
+* Click on menu entry File ➱ New ➱ Requirement.
+* Name it "Req001".
+endif::[]
+ifdef::fr[]
+Pour créer notre 1ère exigence :
+
+* Cliquez pour sélectionnerle _package_ `Requirements` 
+* Cliquez sur le menu menu:File[New > Requirement].
+* Nommez-le "Req001".
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor3]]
+ifndef::slides+uk[.First requirement]
+ifndef::slides+fr[.Première exigence]
+image::{stimulusVersion}/autdoor3.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifdef::slides[== !]
+
+ifndef::slides[]
+
+ifdef::uk[]
+To use the glossary, drag and drop it from the project navigation tree to the system interface as in <<autdoor4>>.
+endif::[]
+ifdef::fr[]
+Pour utiliser le glossaire, faire un _drag and drop_ depuis l'arbre de navigation du projet vers l'interface du système comme illustré en <<autdoor4>>.
+endif::[]
+endif::slides[]
+
+//------------- img --------
+[[autdoor4]]
+ifndef::slides+uk[.Use a Glossary]
+ifndef::slides+fr[.Utilisation du Glossaire]
+image::{stimulusVersion}/autdoor4.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::slides[== !]
+
+ifndef::slides[]
+
+ifdef::uk[]
+Glossary chooser buttons then appear in the interface with book icons, that will help you to declare ports from a glossary definition as shown in <<autdoor5>>.
+endif::[]
+ifdef::fr[]
+Le bouton `Glossary chooser` permet de déclarer les ports à partir des définition du glossaire (cf.  <<autdoor5>>).
+endif::[]
+endif::slides[]
+
+//------------- img --------
+[[autdoor5]]
+ifndef::slides+uk[.Open glossary chooser]
+ifndef::slides+fr[.Définir les ports à partir du Glossaire]
+image::{stimulusVersion}/autdoor5.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+[{topic}]
+ifdef::uk[=== Requirement definition]
+ifdef::fr[=== Définition de l'exigence]
+
+ifndef::slides[]
+
+ifdef::uk[]
+We first consider the two following basic requirements: "When there is somebody, door is open" and "When there is nobody, door is closed". 
+Drag and drop from the Standard Library the necessary menu:Temporal[When] and menu:Logical[Equal] items. Then complete to obtain <<autdoor6>>.
+
+WARNING: The figure has been taken after some polishing in the format of the items...
+
+endif::[]
+ifdef::fr[]
+En utilisant les éléments menu:Temporal[When] et menu:Logical[Equal] de la librairie standard, expimez les exigences suivantes : "When there is somebody, door is open" et "When there is nobody, door is closed". 
+
+Vous obtiendrez alors l'exigebce illustrée en <<autdoor6>>.
+
+WARNING: Sur la figure, le format des exigences a été modifié (click droit menu:Formats[])...
+
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor6]]
+ifndef::slides+uk[.Completed requirement]
+ifndef::slides+fr[.Première exigence rédigée]
+image::{stimulusVersion}/autdoor6.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+[{topic}]
+=== Simulation 1
+
+ifndef::slides[]
+
+ifdef::uk[]
+Now run a simulation and do some steps as in <<autdoor7>>. 
+
+WARNING: We observe that the behaviour of the basic requirements does not reflect the delay, expected after the door has been `'Open`.
+endif::[]
+ifdef::fr[]
+Exécutez une simulation commme illustré en <<autdoor7>>. 
+
+WARNING: Observez que le comportement ne reflète pas le delai, attendu après que la porte soit ouverte `'Open`.
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor7]]
+ifndef::slides+uk[.First door simulation]
+ifndef::slides+fr[.Première simulation]
+image::{stimulusVersion}/autdoor7.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+ifdef::uk[=== Requirement improvement]
+ifdef::fr[=== Re-définition de l'exigence]
+
+ifndef::slides[]
+
+ifdef::uk[]
+Using the menu:Temporal[ForPeriod] item and the drag & drop, add a 3 seconds delay as shown in <<autdoor8>>.
+endif::[]
+ifdef::fr[]
+En utilisant la fonction menu:Temporal[ForPeriod] et le  _drag & drop_, ajoutez un délai de 3 secondes comme illustré en <<autdoor8>>.
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor8]]
+ifndef::slides+uk[.Completed requirement]
+ifndef::slides+fr[.Exigence améliorée]
+image::{stimulusVersion}/autdoor8.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+[{topic}]
+=== Simulation 2
+
+ifndef::slides[]
+
+ifdef::uk[]
+Now run a simulation and do some steps as in <<autdoor9>>. 
+endif::[]
+ifdef::fr[]
+Exécutez une simulation commme illustré en <<autdoor9>>. 
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor9]]
+ifndef::slides+uk[.Second door simulation]
+ifndef::slides+fr[.Deuxième simulation]
+image::{stimulusVersion}/autdoor9.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::uk[]
+WARNING: We observe that the behaviour is not the expected one!
+Surprisingly, the door is not kept open. 
+Why ? 
+To understand, select in the plot window the step where the `door` changes from `'Open` to `'Closed`. 
+In the system window, we observe that the `For 3 [second], Door shall be 'Open` sentence is not active at this simulation step, as shown in  <<autdoor10>>. 
+This is due to the `When` which deactivates its `<BODY>` when condition is false!
+
+endif::[]
+ifdef::fr[]
+WARNING: Observez que le comportement ne reflète toujours pas le delai!
+Pourquoi ? 
+Pour le comprendre, sélectionnez dans la simulation le pas step où `door` change de `'Open` à `'Closed`. 
+Dans la partie `Req001`, on observe que la phrase `For 3 [second], Door shall be 'Open` n'est pas active à ce pas de simulation, comme illustré en  <<autdoor10>>. 
+This is due to the `When` which deactivates its `<BODY>` when condition is false!
+endif::[]
+
+//------------- img --------
+[[autdoor10]]
+ifndef::slides+uk[.Highlighted requirements]
+ifndef::slides+fr[.Valeur des éléments d'exigences à une étape particulière]
+image::{stimulusVersion}/autdoor10.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+ifdef::uk[=== Requirement fixing]
+ifdef::fr[=== Correction de l'exigence]
+
+ifndef::slides[]
+
+ifdef::uk[]
+Actually, what we wanted to say is "From the time someone is detected, then we shall do something for 3 seconds".
+Drag the menu:Temporal[From] item from the Standard Library and drop it over the first `When` in order to replace it, as in <<autdoor11>>.
+endif::[]
+ifdef::fr[]
+En fait nous aurions dû écrire : "From the time someone is detected, then we shall do something for 3 seconds".
+Faite un _drag & drop_ de la fonction menu:Temporal[From] sur la première exigence `When`pour la remplacer et obtenir le résultat illsuté en <<autdoor11>>.
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor11]]
+ifndef::slides+uk[.Replace "When" by "From"]
+ifndef::slides+fr[.Remplacer "When" par "From"]
+image::{stimulusVersion}/autdoor11.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+[{topic}]
+=== Simulation 3
+
+ifndef::slides[]
+
+ifdef::uk[]
+Now run a simulation and do some steps as in <<autdoor12>>. 
+endif::[]
+ifdef::fr[]
+Exécutez une simulation commme illustré en <<autdoor12>>. 
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor12]]
+ifndef::slides+uk[.Third door simulation]
+ifndef::slides+fr[.Troisième simulation]
+image::{stimulusVersion}/autdoor12.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::uk[]
+WARNING: {stimulus} detects a conflict in <<autdoor12>>!!
+Find and correct the error.
+endif::[]
+ifdef::fr[]
+WARNING: {stimulus} détecte un conflit en <<autdoor12>>!!
+Trouvez et corrigez l'erreur. 
+endif::[]
+
+[{topic}]
+ifdef::uk[=== Requirement fixing again]
+ifdef::fr[=== Nouvelle correction de l'exigence]
+
+ifndef::slides[]
+
+ifdef::uk[]
+Of course, there is `Nobody`, we say that the door shall be `Closed`, and at the same time, we require the door be kept open the door opened for three seconds. 
+Therefore the second requirement is obsolete. 
+To remove it, select it and press btn:[Delete] on your keyboard, then simulate again. 
+The fourth simulation is shown in <<autdoor13>>.
+endif::[]
+ifdef::fr[]
+Tentons de supprimer le deuxième terme de l'exigence, devenu obsolète (le sélectionner et cliquer sur btn:[Delete] sur le clavier.
+Relancez la simulation (cf. <<autdoor13>>).
+endif::[]
+
+endif::slides[]
+
+[{topic}]
+=== Simulation 4
+
+ifndef::slides[]
+
+ifdef::uk[]
+Now run a simulation and do some steps as in <<autdoor12>>. 
+endif::[]
+ifdef::fr[]
+Exécutez une simulation commme illustré en <<autdoor12>>. 
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor13]]
+ifndef::slides+uk[.Fourth door requirements]
+ifndef::slides+fr[.Quatrième simulation]
+image::{stimulusVersion}/autdoor13.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+/////
+[{topic}]
+ifdef::uk[=== UK title]
+ifdef::fr[=== Titre français]
+ifndef::slides[]
+ifdef::uk[]
+endif::[]
+ifdef::fr[]
+endif::[]
+endif::slides[]
+/////
+
+ifdef::slides[:leveloffset: 0]

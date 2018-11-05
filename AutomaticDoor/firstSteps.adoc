@@ -1,0 +1,84 @@
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+ifdef::uk[=== Project structure]
+ifdef::fr[=== Structuration du projet]
+
+ifdef::uk[]
+Create the following packages:
+
+* "Library" package is a place where you can add user defined templates to complement the Standard Library.
+* "Requirements" package is intended as a place to organise your system requirements.
+* "Test" package is somewhere to define scenarios and tests.
+
+endif::[]
+
+ifdef::fr[]
+Créez les _packages_ suivants:
+
+* "Library" pour placer ses propres définitions et _templates_.
+* "Requirements" pour organiser les exigences.
+* "Test" pour définir les scenarios et tests.
+endif::[]
+
+//------------- img --------
+ifndef::slides+uk[.Project structure]
+ifndef::slides+fr[.Structuration du projet]
+image::{stimulusVersion}/autdoor1.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+[{topic}]
+ifdef::uk[=== Create your first Glossary]
+ifdef::fr[=== Un premier Glossaire]
+ifdef::uk[]
+A good practice is to start by creating a Glossary. 
+It allows you to gather definitions of interfaces that can be shared among several systems.
+To create a new Glossary in the Requirements package:
+
+* Click to select the "Requirements" package.
+* Click on menu entry menu:File[New > Glossary].
+
+From the automatic door system description, we can identify two signals:
+
+* Sensor which can take the values Someone and Nobody.
+* Door which can take the values Open and Closed.
+
+Add these two definitions to the glossary by clicking on the `+` button.
+Choose `Enum` as type in the dropdown list.
+Double click to edit the created `EnumItem` and type `Someone`. 
+Add the other enumerated value by clicking on the `+` button.
+
+endif::[]
+ifdef::fr[]
+Créez un nouveau Glossaire dans le _package_ `Requirements`:
+
+* Cliquez pour selectionner le _package_ `Requirements`.
+* Cliquez sur le menu menu:File[New > Glossary].
+
+Déterminez les 2 signaux (et leurs valeurs) à partir de la description <<description>>.
+
+//* Sensor which can take the values Someone and Nobody.
+//* Door which can take the values Open and Closed.
+
+Pour ajouter ces 2 definitions, cliquez sur le bouton `+`.
+Choisir le type `Enum`.
+Double cliquer pour éditer `EnumItem` et tapez la 1ère valeur possible. 
+Ajoutez les suivantes (une seule en l'occurence dans notre exemple) en cliquant sur le bouton `+`.
+
+endif::[]
+
+//------------- img --------
+ifndef::slides+uk[.Glossary]
+ifndef::slides+fr[.Glossaire]
+image::{stimulusVersion}/autdoor2.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+/////
+[{topic}]
+ifdef::uk[=== UK title]
+ifdef::fr[=== Titre français]
+ifdef::uk[]
+endif::[]
+ifdef::fr[]
+endif::[]
+/////
+
+ifdef::slides[:leveloffset: 0]
