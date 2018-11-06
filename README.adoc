@@ -11,7 +11,7 @@ endif::[]
 :stimulus: https://argosim.com/product-overview/[Stimulus]
 :tutorialURL: https://download.argosim.com/index.php/s/5ZszF09tl0rd4gv/download
 :baseURL: https://github.com/smart-researchteam/Stimulus
-:baseDocs: {baseURL}/blob/master
+:baseDocs: https://smart-researchteam.github.io/Stimulus
 :icons: font
 
 WARNING: Work in progress!!
