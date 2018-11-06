@@ -1,4 +1,4 @@
-= Stimulus Tutorial
+= Stimulus Tutorials
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -6,9 +6,34 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
+:argosimurl: https://argosim.com/
+:argosim: {argosimurl}[Argosim]
+:stimulus: https://argosim.com/product-overview/[Stimulus]
+:tutorialURL: https://download.argosim.com/index.php/s/5ZszF09tl0rd4gv/download
+:baseURL: https://github.com/smart-researchteam/Stimulus
+:baseDocs: {baseURL}/blob/master
 
-WARNING: Work in progress!!
+(Work in progress!!)
 
 == Content
 
-This repo is aggregating notes on the Stimulus tool.
+This repo is aggregating notes and tutorials on the {Stimulus} tool from {Argosim}. Its content is the only reflect of his author, not the {Argosim} company.
+
+== Available tutorials
+
+In addition (and based on) the tutorial available on the {stimulus} web site: {tutorialURL}, the following tutorials are available:
+
+- Quick Start Guide (
+link:{baseDocs}/QuickStartGuide.html[HTML],
+link:{baseDocs}/QuickStartGuide.pdf[PDF],
+link:{baseDocs}/QuickStartGuide.html[SLIDES])
+- Automatic Door case study (
+link:{baseDocs}/AutomaticDoor.html[HTML],
+link:{baseDocs}/AutomaticDoor.pdf[PDF],
+link:{baseDocs}/AutomaticDoor.html[SLIDES])
+- Porte Automatique [FR] (
+link:{baseDocs}/Porte.html[HTML],
+link:{baseDocs}/Porte.pdf[PDF],
+link:{baseDocs}/Porte.html[SLIDES])
+
+
