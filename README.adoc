@@ -13,7 +13,7 @@ endif::[]
 :baseURL: https://github.com/smart-researchteam/Stimulus
 :baseDocs: {baseURL}/blob/master
 
-(Work in progress!!)
+WARNING: Work in progress!!
 
 == Content
 
