@@ -27,14 +27,14 @@ In addition (and based on) the tutorial available on the {stimulus} web site: {t
 - Quick Start Guide (
 link:{baseDocs}/QuickStartGuide.html[HTML],
 link:{baseDocs}/QuickStartGuide.pdf[PDF],
-link:{baseDocs}/QuickStartGuide.html[SLIDES])
+link:{baseDocs}/QuickStartGuide.slides.html[SLIDES])
 - Automatic Door case study (
 link:{baseDocs}/AutomaticDoor.html[HTML],
 link:{baseDocs}/AutomaticDoor.pdf[PDF],
-link:{baseDocs}/AutomaticDoor.html[SLIDES])
+link:{baseDocs}/AutomaticDoor.slides.html[SLIDES])
 - Porte Automatique [FR] (
 link:{baseDocs}/Porte.html[HTML],
 link:{baseDocs}/Porte.pdf[PDF],
-link:{baseDocs}/Porte.html[SLIDES])
+link:{baseDocs}/Porte.slides.html[SLIDES])
 
 
