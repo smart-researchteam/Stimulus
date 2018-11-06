@@ -1,7 +1,11 @@
 
+//======================================================
+//======================================================
 [{intro}]
 ifdef::uk[== Requirements]
 ifdef::fr[== Exigences] 
+//======================================================
+//======================================================
 
 ifdef::slides[:leveloffset: -1]
 
@@ -15,7 +19,7 @@ ifdef::uk[]
 To create the first requirement of our automatic door system:
 
 * Click to select "Requirements" package
-* Click on menu entry File ➱ New ➱ Requirement.
+* Click on menu entry menu:File[New > Requirement].
 * Name it "Req001".
 endif::[]
 ifdef::fr[]
@@ -30,11 +34,11 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor3]]
-ifndef::slides+uk[.First requirement]
-ifndef::slides+fr[.Première exigence]
+ifndef::slides,uk[.First requirement]
+ifndef::slides,fr[.Première exigence]
 image::{stimulusVersion}/autdoor3.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
-ifdef::slides[== !]
+ifdef::slides[=== !]
 
 ifndef::slides[]
 
@@ -48,11 +52,11 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor4]]
-ifndef::slides+uk[.Use a Glossary]
-ifndef::slides+fr[.Utilisation du Glossaire]
+ifndef::slides,uk[.Use a Glossary]
+ifndef::slides,fr[.Utilisation du Glossaire]
 image::{stimulusVersion}/autdoor4.png[width={defaultwidth},scaledwidth={defaultwidth}]
 
-ifdef::slides[== !]
+ifdef::slides[=== !]
 
 ifndef::slides[]
 
@@ -66,8 +70,8 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor5]]
-ifndef::slides+uk[.Open glossary chooser]
-ifndef::slides+fr[.Définir les ports à partir du Glossaire]
+ifndef::slides,uk[.Open glossary chooser]
+ifndef::slides,fr[.Définir les ports à partir du Glossaire]
 image::{stimulusVersion}/autdoor5.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
 [{topic}]
@@ -96,8 +100,8 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor6]]
-ifndef::slides+uk[.Completed requirement]
-ifndef::slides+fr[.Première exigence rédigée]
+ifndef::slides,uk[.Completed requirement]
+ifndef::slides,fr[.Première exigence rédigée]
 image::{stimulusVersion}/autdoor6.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
 [{topic}]
@@ -120,8 +124,8 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor7]]
-ifndef::slides+uk[.First door simulation]
-ifndef::slides+fr[.Première simulation]
+ifndef::slides,uk[.First door simulation]
+ifndef::slides,fr[.Première simulation]
 image::{stimulusVersion}/autdoor7.png[width={defaultwidth},scaledwidth={defaultwidth}]
 
 [{topic}]
@@ -141,8 +145,8 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor8]]
-ifndef::slides+uk[.Completed requirement]
-ifndef::slides+fr[.Exigence améliorée]
+ifndef::slides,uk[.Completed requirement]
+ifndef::slides,fr[.Exigence améliorée]
 image::{stimulusVersion}/autdoor8.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
 [{topic}]
@@ -161,10 +165,11 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor9]]
-ifndef::slides+uk[.Second door simulation]
-ifndef::slides+fr[.Deuxième simulation]
+ifndef::slides,uk[.Second door simulation]
+ifndef::slides,fr[.Deuxième simulation]
 image::{stimulusVersion}/autdoor9.png[width={defaultwidth},scaledwidth={defaultwidth}]
 
+ifndef::slides[]
 ifdef::uk[]
 WARNING: We observe that the behaviour is not the expected one!
 Surprisingly, the door is not kept open. 
@@ -181,11 +186,14 @@ Pour le comprendre, sélectionnez dans la simulation le pas step où `door` chan
 Dans la partie `Req001`, on observe que la phrase `For 3 [second], Door shall be 'Open` n'est pas active à ce pas de simulation, comme illustré en  <<autdoor10>>. 
 This is due to the `When` which deactivates its `<BODY>` when condition is false!
 endif::[]
+endif::[]
+
+ifdef::slides[=== !]
 
 //------------- img --------
 [[autdoor10]]
-ifndef::slides+uk[.Highlighted requirements]
-ifndef::slides+fr[.Valeur des éléments d'exigences à une étape particulière]
+ifndef::slides,uk[.Highlighted requirements]
+ifndef::slides,fr[.Valeur des éléments d'exigences à une étape particulière]
 image::{stimulusVersion}/autdoor10.png[width={defaultwidth},scaledwidth={defaultwidth}]
 
 [{topic}]
@@ -207,8 +215,8 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor11]]
-ifndef::slides+uk[.Replace "When" by "From"]
-ifndef::slides+fr[.Remplacer "When" par "From"]
+ifndef::slides,uk[.Replace "When" by "From"]
+ifndef::slides,fr[.Remplacer "When" par "From"]
 image::{stimulusVersion}/autdoor11.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
 [{topic}]
@@ -227,9 +235,11 @@ endif::slides[]
 
 //------------- img --------
 [[autdoor12]]
-ifndef::slides+uk[.Third door simulation]
-ifndef::slides+fr[.Troisième simulation]
+ifndef::slides,uk[.Third door simulation]
+ifndef::slides,fr[.Troisième simulation]
 image::{stimulusVersion}/autdoor12.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
 
 ifdef::uk[]
 WARNING: {stimulus} detects a conflict in <<autdoor12>>!!
@@ -244,17 +254,13 @@ endif::[]
 ifdef::uk[=== Requirement fixing again]
 ifdef::fr[=== Nouvelle correction de l'exigence]
 
-ifndef::slides[]
-
 ifdef::uk[]
 Of course, there is `Nobody`, we say that the door shall be `Closed`, and at the same time, we require the door be kept open the door opened for three seconds. 
 Therefore the second requirement is obsolete. 
 To remove it, select it and press btn:[Delete] on your keyboard, then simulate again. 
-The fourth simulation is shown in <<autdoor13>>.
 endif::[]
 ifdef::fr[]
 Tentons de supprimer le deuxième terme de l'exigence, devenu obsolète (le sélectionner et cliquer sur btn:[Delete] sur le clavier.
-Relancez la simulation (cf. <<autdoor13>>).
 endif::[]
 
 endif::slides[]
@@ -265,19 +271,397 @@ endif::slides[]
 ifndef::slides[]
 
 ifdef::uk[]
-Now run a simulation and do some steps as in <<autdoor12>>. 
+Now run a simulation and do some steps as in <<autdoor13>>... 
 endif::[]
 ifdef::fr[]
-Exécutez une simulation commme illustré en <<autdoor12>>. 
+Exécutez une simulation commme illustré en <<autdoor13>>...
+Que constatez-vous ?!
 endif::[]
 
 endif::slides[]
 
 //------------- img --------
 [[autdoor13]]
-ifndef::slides+uk[.Fourth door requirements]
-ifndef::slides+fr[.Quatrième simulation]
+ifndef::slides,uk[.Fourth door requirements]
+ifndef::slides,fr[.Quatrième simulation]
 image::{stimulusVersion}/autdoor13.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+
+[{topic}]
+=== Simulation 5
+
+ifndef::slides[]
+
+ifdef::uk[]
+We observe that the door remains open for a number of seconds (more than 3) after someone has been detected. 
+However, the door remains closed when someone is next detected. 
+We also notice that the door line is dotted until the end of the simulation, which means that no requirement applies during this period of time and {stimulus} is free to choose whatever value for `Door`, Open or Closed, that it wants. 
+Since the door behaviour is free, the door can be equally open or closed. 
+Doing some simulation steps, we see the door is always free, even if someone else is detected again. Actually, we want to repeat the "open for 3 seconds" behaviour each time someone is detected.
+
+Drag the menu:Temporal[FromEach] item and drop it onto the `From`. 
+Then, simulate again.
+endif::[]
+ifdef::fr[]
+On observe des comportements non désirés (porte qui reste ouverte plus que 3s, qui ne s'ouvre pas après une deuxième détection, etc.). 
+La ligne en pointillée indique qu'à ces moments, la valeur de `Door` (Open ou Closed), n'est pas contraintes. 
+L'erreur vient du fait qu'on voulait en fait répéter le comportement "open for 3 seconds" à chaque détection de nouvelle personne!
+
+Sélectionnez l'item menu:Temporal[FromEach] dans la librairie et lachez-le sur `From`. 
+Puis relancer la simulation.
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor14]]
+ifndef::slides,uk[.Fifth simulation]
+ifndef::slides,fr[.Cinquième simulation]
+image::{stimulusVersion}/autdoor14.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+=== Simulation 6
+
+ifndef::slides[]
+
+ifdef::uk[]
+The door opens again when the second person is detected, which is fine. 
+However, the door is still open a long time after the first person, and we really want to close the door three seconds after the latest detection.
+This sequence can be specified with the menu:Temporal[DoAfterwards] item. 
+Use it to obtain the following requirement (see <<autdoor15>> and the resulting simulation in <<autdoor16>>):
+endif::[]
+ifdef::fr[]
+Bon, la porte reste enfin ouverte 3s à chaque détection. 
+Néanmoins elle reste parfois ouverte plus longtemps.
+Ceci peut être exprimé en utilisant l'item menu:Temporal[DoAfterwards]. 
+Utilisez-là pour obtenir le résultat illustré en <<autdoor15>> et qui donne la simulation illustrée en <<autdoor16>>:
+endif::[]
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor15]]
+ifndef::slides,uk[.Sixth door requirements]
+ifndef::slides,fr[.Sixième version des exigences]
+image::{stimulusVersion}/autdoor15.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::slides[=== !]
+
+//------------- img --------
+[[autdoor16]]
+ifndef::slides,uk[.Sixth door simulation]
+ifndef::slides,fr[.Sixième simulation]
+image::{stimulusVersion}/autdoor16.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+[{topic}]
+=== Simulation 7
+
+ifndef::slides[]
+
+ifdef::uk[]
+Some requirement is missing. 
+We want the door to be closed before the first person is detected. 
+Try to add the requirement to end up with the final simulation illustrated in <<autdoor17>>.
+endif::[]
+ifdef::fr[]
+Ajoutez l'exigence manquante qui permette d'éviter l'ouverture inutile de la porte en début de simulation.
+Vous devrez obtenir une simulation similaire à la <<autdoor17>>.
+endif::[]
+
+// Before the time sensor is 'Someone door shall be `Closed
+
+endif::slides[]
+
+//------------- img --------
+[[autdoor17]]
+ifndef::slides,uk[.Seventh simulation]
+ifndef::slides,fr[.Septième simulation]
+image::{stimulusVersion}/autdoor17.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifdef::slides[:leveloffset: 0]
+
+//======================================================
+//======================================================
+ifdef::slides[]
+[{intro}]
+== Scenarios
+endif::[]
+//======================================================
+//======================================================
+
+[{topic}]
+ifdef::uk[== A scenario for the Sensor]
+ifdef::fr[== Un scénario pour le _sensor_]
+ifndef::slides[]
+ifdef::uk[]
+As explained in previous section, the Sensor signal is toggling too fast. 
+We would like to test the door system by increasing our control over the input of the system. 
+To do so, we are going to create a scenario for Sensor. 
+Start by creating a System into the `Test` package, and call it `SensorInput`.
+
+As for "Req001", import the glossary "Glossary" and declare the Sensor port with the glossary chooser.
+We recommend that you manually set the direction of scenarios ports. 
+In this case, set Sensor direction to `Out`, as shown in <<autdoor18>>, in order to make sure that only this scenario will produce the Sensor value.
+endif::[]
+ifdef::fr[]
+Vous avez pu constater que le problème de la simulation c'est que le `sensor` change trop souvent de valeur (de manière irréaliste). 
+Nous allons donc créer un scénario pour contrôler les _inputs_ de la simulation.
+Créez un nouveau système dans le _package_ `Test`, et nommez-le `SensorInput`.
+
+Ajoutez comme précédemment le glossaire pour ajouter un port `sensor`.
+Précisez la direction `Out` pour ce port comme illustré en <<autdoor18>>
+endif::[]
+endif::slides[]
+
+//------------- img --------
+[[autdoor18]]
+ifndef::slides,uk[.Port's direction to Out]
+ifndef::slides,fr[.Choix de la direction du port]
+image::{stimulusVersion}/autdoor18.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+ifdef::uk[]
+To write the scenario, we will use a new {stimulus} concept: the Automaton, also know as a state machine. 
+Of course the Automaton concept can also be used to write requirements. 
+Actually {stimulus} makes no difference between "requirements" and "scenarios". 
+For it, they are only Systems. 
+Calling a System a "requirement" or a "scenario" is from the user point of view.
+To insert an Automaton, drag and drop one from the toolbar in your system window.
+A new automaton appears with an initial state ("State0") in the system window as shown in <<scenario1>>.
+endif::[]
+ifdef::fr[]
+Pour écrire le scenario, nous allons utiliser le concept {stimulus} d'Automate (ou machine à état). 
+
+NOTE: Les automates peuvent aussi être utilisés pour écrire les exigences. 
+{stimulus} ne fait aucune différence entre "requirements" et "scenarios". 
+Pour ajouter un Automate, faites un click droit puis menu:Insert[Automaton] (ou bien utilisez l'icône correspondante dans la barre d'icônes).
+
+Un nouvel automate apparaît avec l'état initial "State0" comme illustré en <<scenario1>>.
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario1]]
+ifndef::slides,uk[.Automaton created]
+ifndef::slides,fr[.Création d'un automate]
+image::{stimulusVersion}/scenario1.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+ifdef::uk[]
+To create another state, place your mouse cursor near the state bottom border, a little orange triangle appears as in <<scenario2>>, double click on it.
+A new state "State1" appears, connected to the first one by a transition.
+endif::[]
+ifdef::fr[]
+Pour créer un autre état, placez la souris près du bord bas de l'état, jusqu'à ce qu'un petit triangle orange apparaisse, puis double cliquez dessus (cf. <<scenario2>>).
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario2]]
+ifndef::slides,uk[.Two connected states]
+ifndef::slides,fr[.Deux états connectés]
+image::{stimulusVersion}/scenario2.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+ifdef::uk[]
+Then, complete the automaton as in as in <<scenario3>>.
+endif::[]
+ifdef::fr[]
+Utilisez les mêmes techniques que précédemment pour établir le scénario illustré en <<scenario3>>.
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario3]]
+ifndef::slides,uk[.Writing scenario]
+ifndef::slides,fr[.Scénario à base d'automates]
+image::{stimulusVersion}/scenario3.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+ifdef::uk[]
+Observe generated values as shown in <<scenario5>>.
+endif::[]
+ifdef::fr[]
+Contrôlez l'exécution du scénario (cf. <<scenario5>>).
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario5]]
+ifndef::slides,uk[.Scenario Input behaviour]
+ifndef::slides,fr[.Comportement du scénario]
+image::{stimulusVersion}/scenario5.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+//======================================================
+//======================================================
+ifdef::slides[]
+[{intro}]
+== Tests
+endif::[]
+//======================================================
+//======================================================
+
+[{topic}]
+ifdef::uk[== Testing door system]
+ifdef::fr[== Test de la porte]
+
+ifndef::slides[]
+ifdef::uk[]
+To test the door system, we will create a top-level system, using a block diagram, to connect the door system and the scenario we just created as input.
+First, create a system named "World" in the Test package.
+
+Then we will use a block diagram to graphically connect systems. 
+Drag and drop a new block diagram from the main toolbar into the "World" system.
+
+To insert a block referencing the "Req001" requirement, drag and drop it into the block diagram area.
+A box appears, it represents our "Req001" requirements and its interface. 
+
+Do the same for the "SensorInput" system.
+To link Sensor from "SensorInput" to "Req001" one, drag from the output port and drop onto the input one.
+
+In order to visualise block diagram inner signals, we need to place probes over the links. 
+Click to select "Req001" box, then click on menu entry menu:Transform[Connect Ports to Interface] to obtain <<scenario4>>.
+endif::[]
+ifdef::fr[]
+Pour tester la porte, nous allons créer un système haut-niveau en utilisant un _block diagram_ 
+(à la SysML), pour connecter la porte et le scenario.
+
+Créez un système appelé "World" dans le _package_ `Test`.
+
+Pour ajouter un _block diagram_, faites un click droit puis menu:Insert[Block Diagram] (ou bien utilisez l'icône correspondante dans la barre d'icônes).
+
+Insérer le block `Req001` en le glissant dans le _block diagram_.
+Faites de même avec `SensorInput`.
+Connectez les ports `sensor`.
+
+Pour visualiser les signaux entrants, nous auront besoin d'une sonde.
+Pour cela, sélectionnez `Req001`, puis menu:Transform[Connect Ports to Interface] pour obtenir la <<scenario4>>.
+endif::[]
+endif::slides[]
+
+//------------- img --------
+[[scenario4]]
+ifndef::slides,uk[.Probed block diagram]
+ifndef::slides,fr[.Block Diagram avec sonde]
+image::{stimulusVersion}/scenario4.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+ifdef::uk[]
+Simulate as in <<scenario6>>. 
+The door is closing and opening as expected. 
+We recommend that you create other scenarios to complete door system test.
+endif::[]
+ifdef::fr[]
+Enfin exécutez le test comme illustré en <<scenario6>>
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario6]]
+ifndef::slides,uk[.World simulation]
+ifndef::slides,fr[.Simulation finale]
+image::{stimulusVersion}/scenario6.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+//======================================================
+//======================================================
+ifdef::slides[]
+[{intro}]
+ifdef::uk[== Requirements Observers]
+ifdef::fr[== Observateurs]
+endif::[]
+//======================================================
+//======================================================
+
+[{topic}]
+ifdef::uk[== Requirements Observers]
+ifdef::fr[== Observateurs]
+
+ifndef::slides[]
+ifdef::uk[]
+To enforce requirement quality, we recommend that you check safety requirements violations through your requirement writing process. 
+{stimulus} allows you to transform requirements into Observers that will check your current requirements behaviour. 
+You can also check for violations on any refined or rewritten requirements.
+In the door system, as a safety requirement, we would like to guarentee that when someone is detected, the door shall not be closed.
+
+To create an Observer, drag and drop an Observer from the main toolbar (see <<scenario7>>).
+
+To rename the observer, double click on the title, and name it "Safety".
+Then, we can write the safety requirement we want to check during simulation, in the "Safety" observer.
+
+Any requirement declared inside an Observer will not constrain the system behaviour. 
+Any violation will be reported in the plotter navigation tree.
+Simulate some steps and look at the status of the Observer, as shown in <<scenario7>>
+endif::[]
+ifdef::fr[]
+Pour renforcer la qualité des exigences, nous recommandons de les vérifier au fur et à mesure de leur écriture. 
+{stimulus} permet de transformer les exigences en _Observers_ qui vont vérifier les exigences courantes. 
+Cela équivaut à faire des tests de non régression.
+Un exemple de propriété désirable pour notre porte est que nous voulons garantir que quand quelqu'un est détecté, la porte ne doit pas être fermée.
+
+Pour créer un _Observer_, utilisez l'icône correspondante dans la barre d'icônes (cf. <<scenario7>>).
+
+Renommez le en `Safety` après avoir double cliqué dessus. 
+Puis saisissez l'invariant initial (quand une personne est détectée la porte ne doit pas être femrée).
+
+Réalisez une exécution comme illustré en <<scenario7>>.
+endif::[]
+endif::slides[]
+
+//------------- img --------
+[[scenario7]]
+ifndef::slides,uk[.Simulation with the Observer]
+ifndef::slides,fr[.Simulation avec Observateur]
+image::{stimulusVersion}/scenario7.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
+ifndef::slides[]
+ifdef::uk[]
+A green color means that no violation has been detected so far, as shown in <<scenario8>>.
+endif::[]
+ifdef::fr[]
+Observez que tout se passe bien de son point de vue (couleur verte) en simulant quelques pas d'exécutions comme illustré en <<scenario8>>.
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario8]]
+ifndef::slides,uk[.Observer in plotter]
+ifndef::slides,fr[.Observateur fonctionnel]
+image::{stimulusVersion}/scenario8.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+
+ifndef::slides[]
+ifdef::uk[]
+This Observer will ease your requirement writing process and your simulation analysis when running different scenarios.
+To illustrate what is an Observer violation, we will analyse a previous version of our requirements (the fourth one for example).
+
+We simulate the "World" and we observe that the eye turns to red, it means that the Observer is violated, as shown in <<scenario9>>. 
+To get the explanation and the step where the violation occurs, click on the "Violated Observer" message in the bottom part of the window. 
+The suspicious step is selected and we observe that the door is closed at the same time someone is detected, therefore violating our safety requirement.
+endif::[]
+ifdef::fr[]
+Reprenez les exigences erronnées du début et vérifiez que l'observateur joue son rôle comme illustré en <<scenario9>>.
+endif::[]
+endif::slides[]
+
+ifdef::slides[== !]
+
+//------------- img --------
+[[scenario9]]
+ifndef::slides,uk[.Violated Observer]
+ifndef::slides,fr[.Observateur mécontent]
+image::{stimulusVersion}/scenario9.png[width={defaultwidth},scaledwidth={defaultwidth}]
+
 
 /////
 [{topic}]

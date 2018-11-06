@@ -16,10 +16,12 @@ Nous allons modéliser une porte automatique (type supermarché) dont le comport
 Le capteur (`sensor`), indique selon que quelqu'un (`someone`) ou non (`nobody`) est détecté et si la porte doit alors être ouverte (`open`) ou fermée (`closed`).
 endif::[]
 
+ifdef::slides[=== !]
+
 //------------- img --------
 [[chronogram]]
-ifndef::slides+uk[.Automatic door chronogram]
-ifndef::slides+fr[.Chronogramme de la porte automatique]
+ifndef::slides,uk[.Automatic door chronogram]
+ifndef::slides,fr[.Chronogramme de la porte automatique]
 image::chronogram.png[width={defaultwidth},scaledwidth={defaultwidth}]
 
 ifdef::slides[:leveloffset: 0]

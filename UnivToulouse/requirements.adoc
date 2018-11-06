@@ -109,7 +109,7 @@ Possibilité de jouer tous les tests => suite de test
 SEND + MORE = MONEY
 
 [{topic}]
-== Remplacer les iterateurs etc. pzar des phrases
+== Remplacer les iterateurs etc. par des phrases
 
 créer un système
 les ports sont les paramètres

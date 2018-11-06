@@ -5,6 +5,8 @@ ifdef::fr[== À propos de ce tutoriel]
 ifdef::uk[]
 This tutorial is based on the official one from {argosim} and available here: {tutorialURL}.
 
+ifdef::slides[== !]
+
 This tutorial will present:
 
 * methodology guidelines ;
@@ -18,6 +20,8 @@ All of that will be presented along a concrete system example: an automatic door
 endif::[]
 ifdef::fr[]
 Ce tutoriel est basé sur le tutoriel officiel (en anglais) d'{argosim} et disponible ici : {tutorialURL}.
+
+ifdef::slides[== !]
 
 Il va permettre d'aborder :
 

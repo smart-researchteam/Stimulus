@@ -10,7 +10,8 @@ default: stimulus.html
 
 all: QuickStartGuide.html QuickStartGuide.pdf QuickStartGuide.slides.html \
 LGS.html LGS.pdf LGS.slides.html \
-AutomaticDoor.html
+AutomaticDoor.html AutomaticDoor.pdf AutomaticDoor.slides.html \
+Porte.html Porte.pdf Porte.slides.html
 
 #-----------------------------------------------------
 QuickStartGuide.html: main.adoc QuickStartGuide/*.adoc
@@ -32,6 +33,8 @@ QuickStartGuide.pdf: main.adoc QuickStartGuide/*.adoc
 QuickStartGuide.slides.html: main.adoc QuickStartGuide/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
 	asciidoctor -a icons=font -a data-uri -b dzslides -a uk \
+	-a defaultwidth=100% \
+	-a defaultwidthmenu=50% \
 	-T $(DZSLIDES) -E slim \
     -a slides -a dzslides \
 	-r asciidoctor-diagram \
@@ -60,6 +63,8 @@ LGS.pdf: main.adoc LGS/*.adoc
 LGS.slides.html: main.adoc LGS/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
 	asciidoctor -a icons=font -a data-uri -b dzslides -a uk \
+	-a defaultwidth=100% \
+	-a defaultwidthmenu=50% \
 	-T $(DZSLIDES) -E slim \
     -a slides -a dzslides \
 	-r asciidoctor-diagram \
@@ -71,15 +76,45 @@ LGS.slides.html: main.adoc LGS/*.adoc
 #-----------------------------------------------------
 
 #-----------------------------------------------------
-AutomaticDoor.html: main.adoc AutomaticDoor/*.adoc
+Porte.html: main.adoc AutomaticDoor/*.adoc
 	asciidoctor -b html5 -a fr \
 	-a caseStudy=AutomaticDoor \
 	-a caseStudyTitle="Porte Automatique [FR]" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-AutomaticDoor.pdf: main.adoc AutomaticDoor/*.adoc
+Porte.pdf: main.adoc AutomaticDoor/*.adoc
 	asciidoctor-pdf -a toc2 -a fr \
+	-a caseStudy=AutomaticDoor \
+	-a caseStudyTitle="Porte Automatique" \
+	-a stimulusVersion=2018.09.1 \
+	main.adoc -o $@
+
+Porte.slides.html: main.adoc AutomaticDoor/*.adoc
+	@echo '==> Compiling asciidoc files to generate Dzslides'
+	asciidoctor -a icons=font -a data-uri -b dzslides -a fr \
+	-a defaultwidth=100% \
+	-a defaultwidthmenu=50% \
+	-T $(DZSLIDES) -E slim \
+    -a slides -a dzslides \
+	-r asciidoctor-diagram \
+    -a source-highlighter=$(HIGHLIGHT) \
+	-a caseStudy=AutomaticDoor \
+	-a caseStudyTitle="Porte Automatique" \
+	-a stimulusVersion=2018.09.1 \
+	main.adoc -o $@
+#-----------------------------------------------------
+
+#-----------------------------------------------------
+AutomaticDoor.html: main.adoc AutomaticDoor/*.adoc
+	asciidoctor -b html5 -a uk \
+	-a caseStudy=AutomaticDoor \
+	-a caseStudyTitle="Porte Automatique [FR]" \
+	-a stimulusVersion=2018.09.1 \
+	main.adoc -o $@
+
+AutomaticDoor.pdf: main.adoc AutomaticDoor/*.adoc
+	asciidoctor-pdf -a toc2 -a uk \
 	-a caseStudy=AutomaticDoor \
 	-a caseStudyTitle="Porte Automatique" \
 	-a stimulusVersion=2018.09.1 \
@@ -87,7 +122,9 @@ AutomaticDoor.pdf: main.adoc AutomaticDoor/*.adoc
 
 AutomaticDoor.slides.html: main.adoc AutomaticDoor/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
-	asciidoctor -a icons=font -a data-uri -b dzslides -a fr \
+	asciidoctor -a icons=font -a data-uri -b dzslides -a uk \
+	-a defaultwidth=100% \
+	-a defaultwidthmenu=50% \
 	-T $(DZSLIDES) -E slim \
     -a slides -a dzslides \
 	-r asciidoctor-diagram \

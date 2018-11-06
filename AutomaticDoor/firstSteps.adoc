@@ -21,14 +21,18 @@ Créez les _packages_ suivants:
 * "Test" pour définir les scenarios et tests.
 endif::[]
 
+ifdef::slides[=== !]
+
 //------------- img --------
-ifndef::slides+uk[.Project structure]
-ifndef::slides+fr[.Structuration du projet]
+ifndef::slides,uk[.Project structure]
+ifndef::slides,fr[.Structuration du projet]
 image::{stimulusVersion}/autdoor1.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
 [{topic}]
 ifdef::uk[=== Create your first Glossary]
 ifdef::fr[=== Un premier Glossaire]
+
+ifndef::slides[]
 ifdef::uk[]
 A good practice is to start by creating a Glossary. 
 It allows you to gather definitions of interfaces that can be shared among several systems.
@@ -65,10 +69,11 @@ Double cliquer pour éditer `EnumItem` et tapez la 1ère valeur possible.
 Ajoutez les suivantes (une seule en l'occurence dans notre exemple) en cliquant sur le bouton `+`.
 
 endif::[]
+endif::[]
 
 //------------- img --------
-ifndef::slides+uk[.Glossary]
-ifndef::slides+fr[.Glossaire]
+ifndef::slides,uk[.Glossary]
+ifndef::slides,fr[.Glossaire]
 image::{stimulusVersion}/autdoor2.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 
 /////
