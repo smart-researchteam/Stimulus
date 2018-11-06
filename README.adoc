@@ -18,7 +18,9 @@ WARNING: Work in progress!!
 
 == Content
 
-This repo is aggregating notes and tutorials on the {Stimulus} tool from {Argosim}. Its content is the only reflect of his author, not the {Argosim} company.
+This repo is aggregating notes and tutorials on the {Stimulus} tool from {Argosim}. 
+
+NOTE: Its content only reflects on his author's understandings and expertise of the tool.
 
 == Available tutorials
 
@@ -37,4 +39,12 @@ link:{baseDocs}/Porte.html[HTML],
 link:{baseDocs}/Porte.pdf[PDF],
 link:{baseDocs}/Porte.slides.html[SLIDES])
 
+== Current status
 
+I am currently working on an additional turorial based on the LGS case study.
+
+== How to contribute ?
+
+- Fork the repo version of this site: {baseURL}
+- Make a merge request
+- Voilà!
