@@ -135,6 +135,11 @@ AutomaticDoor.slides.html: main.adoc AutomaticDoor/*.adoc
 	main.adoc -o $@
 #-----------------------------------------------------
 
+publish:
+	asciidoctor README.adoc
+	git commit -am "publishing web site"
+	git push
+
 %.html: %.$(EXT) 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
 	asciidoctor -b html5 $<
