@@ -78,10 +78,10 @@ Dans ce document vous trouverez:
 
 - son contexte en <<context>>, 
 - une étude de cas commençant en <<caseStudy>>,
-- des explications sur les éléments de base de {stimulus} en <<basics>> (uniquement en anglais pour l'instant), et
-- des explications sur les éléments avancés de {stimulus} en <<advanced>> (uniquement en anglais pour l'instant).
+- des explications sur les éléments de base de {stimulus} en <<basics>> (principalement en anglais pour l'instant), et
+- des explications sur les éléments avancés de {stimulus} en <<advanced>> (principalement en anglais pour l'instant).
 
-TIP: Une **F**oire **A**ux **Q**uestions (FAQ) est disponible en <<faq>> (uniquement en anglais pour l'instant).
+TIP: Une **F**oire **A**ux **Q**uestions (FAQ) est disponible en <<faq>> (principalement en anglais pour l'instant).
 endif::[]
 
 endif::slides[]

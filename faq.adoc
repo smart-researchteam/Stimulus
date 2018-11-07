@@ -47,7 +47,7 @@ ifdef::uk[]
 To move a port in a block diagram, maintain btn:MAJ[] (Shift) while moving the port with the mouse (left click).
 endif::[]
 ifdef::fr[]
-Pour déplacer un port dans un bloc diagramme, maintenez la touche btn:MAJ[] (Shift) pendant que vous vous déplacez avec clic gauche de la souris.
+Pour déplacer un port dans un bloc diagramme, maintenez la touche btn:[MAJ] (Shift) pendant que vous vous déplacez avec clic gauche de la souris.
 endif::[]
 
 endif::slides[]

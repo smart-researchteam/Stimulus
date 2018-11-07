@@ -52,8 +52,10 @@ I am currently working on an additional turorial based on the LGS case study.
 - Make a merge request
 - Voilà!
 
+List of contributors:
+
+- http://www.univ-tlse2.fr/accueil/formation-insertion/odf-2016-2020/master-informatique-collaborative-en-entreprise-ice--386373.kjsp[Master ICE] 2018-2019 students (figures and typos in the Automatic Door tutorial)
 
 == Credits
 
-
--Flags Icons made by https://www.freepik.com[Freepik] from https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+-Flags Icons made by https://www.freepik.com[Freepik] from https://www.flaticon.com/[www.flaticon.com] is licensed by http://creativecommons.org/licenses/by/3.0/[CC 3.0 BY]
