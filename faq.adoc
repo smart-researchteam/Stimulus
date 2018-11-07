@@ -38,4 +38,16 @@ ifndef::slides[.Search tool]
 image::recherche.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 //------------- img --------
 
+[{topic}]
+=== How can I move a port on a system ?
+ifdef::uk[=== How can I move a port on a system ?]
+ifdef::fr[=== Comment déplacer graphiquement le port d'un système ?]
+
+ifdef::uk[]
+To move a port in a block diagram, maintain btn:MAJ[] (Shift) while moving the port with the mouse (left click).
+endif::[]
+ifdef::fr[]
+Pour déplacer un port dans un bloc diagramme, maintenez la touche btn:MAJ[] (Shift) pendant que vous vous déplacez avec clic gauche de la souris.
+endif::[]
+
 endif::slides[]
