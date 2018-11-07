@@ -13,6 +13,9 @@ endif::[]
 :baseURL: https://github.com/smart-researchteam/Stimulus
 :baseDocs: https://smart-researchteam.github.io/Stimulus
 :icons: font
+:imagesdir: images
+:us-icon: image:united-states.png[]
+:fr-icon: image:france.png[]
 
 WARNING: Work in progress!!
 
@@ -26,15 +29,15 @@ NOTE: Its content only reflects on his author's understandings and expertise of 
 
 In addition (and based on) the tutorial available on the {stimulus} web site: {tutorialURL}, the following tutorials are available:
 
-- Quick Start Guide (
+-  Quick Start Guide {us-icon} (
 link:{baseDocs}/QuickStartGuide.html[HTML],
 link:{baseDocs}/QuickStartGuide.pdf[PDF],
 link:{baseDocs}/QuickStartGuide.slides.html[SLIDES])
-- Automatic Door case study (
+- Automatic Door case study {us-icon} (
 link:{baseDocs}/AutomaticDoor.html[HTML],
 link:{baseDocs}/AutomaticDoor.pdf[PDF],
 link:{baseDocs}/AutomaticDoor.slides.html[SLIDES])
-- Porte Automatique [FR] (
+- Porte Automatique {fr-icon} (
 link:{baseDocs}/Porte.html[HTML],
 link:{baseDocs}/Porte.pdf[PDF],
 link:{baseDocs}/Porte.slides.html[SLIDES])
