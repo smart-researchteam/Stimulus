@@ -184,7 +184,7 @@ WARNING: Observez que le comportement ne reflète toujours pas le delai!
 Pourquoi ? 
 Pour le comprendre, sélectionnez dans la simulation le pas step où `door` change de `'Open` à `'Closed`. 
 Dans la partie `Req001`, on observe que la phrase `For 3 [second], Door shall be 'Open` n'est pas active à ce pas de simulation, comme illustré en  <<autdoor10>>. 
-This is due to the `When` which deactivates its `<BODY>` when condition is false!
+C'est à cause du `When` qui désactive son `<BODY>` quand la condition est fausse!
 endif::[]
 endif::[]
 

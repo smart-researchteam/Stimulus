@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Jean-Michel Bruel, bruel@irit.fr</span><br>
 <span id="revnumber">version 1.0,</span>
-<span id="revdate">2018-11-06</span>
+<span id="revdate">2018-11-07</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des Matières</div>
@@ -815,7 +815,7 @@ Observez que le comportement ne reflète toujours pas le delai!
 Pourquoi ?
 Pour le comprendre, sélectionnez dans la simulation le pas step où <code>door</code> change de <code>'Open</code> à <code>'Closed</code>.
 Dans la partie <code>Req001</code>, on observe que la phrase <code>For 3 [second], Door shall be 'Open</code> n&#8217;est pas active à ce pas de simulation, comme illustré en  <a href="#autdoor10">Figure 11</a>.
-This is due to the <code>When</code> which deactivates its <code>&lt;BODY&gt;</code> when condition is false!
+C&#8217;est à cause du <code>When</code> qui désactive son <code>&lt;BODY&gt;</code> quand la condition est fausse!
 </td>
 </tr>
 </table>
