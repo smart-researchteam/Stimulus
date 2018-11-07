@@ -4,6 +4,7 @@ EXT = adoc
 ASCIIDOCTOR=asciidoctor -a icons=font -a data-uri
 HIGHLIGHT=pygments
 DZSLIDES=../asciidoctor-backends/slim/dzslides
+DEP = faq.adoc basics.adoc advanced.adoc
 #-----------------------------------------------------
 
 default: stimulus.html
@@ -14,7 +15,7 @@ AutomaticDoor.html AutomaticDoor.pdf AutomaticDoor.slides.html \
 Porte.html Porte.pdf Porte.slides.html
 
 #-----------------------------------------------------
-QuickStartGuide.html: main.adoc QuickStartGuide/*.adoc
+QuickStartGuide.html: main.adoc $(DEP) QuickStartGuide/*.adoc
 	@echo '==> Compiling asciidoc files to generate html'
 	asciidoctor -b html5 -a data-uri -a uk \
 	-a caseStudy=QuickStartGuide \
@@ -22,7 +23,7 @@ QuickStartGuide.html: main.adoc QuickStartGuide/*.adoc
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-QuickStartGuide.pdf: main.adoc QuickStartGuide/*.adoc
+QuickStartGuide.pdf: main.adoc $(DEP) QuickStartGuide/*.adoc
 	@echo '==> Compiling asciidoc files to generate pdf'
 	asciidoctor-pdf -a toc2 -a uk \
 	-a caseStudy=QuickStartGuide \
@@ -30,7 +31,7 @@ QuickStartGuide.pdf: main.adoc QuickStartGuide/*.adoc
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-QuickStartGuide.slides.html: main.adoc QuickStartGuide/*.adoc
+QuickStartGuide.slides.html: main.adoc $(DEP) QuickStartGuide/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
 	asciidoctor -a icons=font -a data-uri -b dzslides -a uk \
 	-a defaultwidth=100% \
@@ -46,21 +47,21 @@ QuickStartGuide.slides.html: main.adoc QuickStartGuide/*.adoc
 #-----------------------------------------------------
 
 #-----------------------------------------------------
-LGS.html: main.adoc LGS/*.adoc
+LGS.html: main.adoc $(DEP) LGS/*.adoc
 	asciidoctor -b html5 -a uk \
 	-a caseStudy=LGS \
 	-a caseStudyTitle="Landing Gear System" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-LGS.pdf: main.adoc LGS/*.adoc
+LGS.pdf: main.adoc $(DEP) LGS/*.adoc
 	asciidoctor-pdf -a toc2 -a uk \
 	-a caseStudy=LGS \
 	-a caseStudyTitle="Landing Gear Sytem" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-LGS.slides.html: main.adoc LGS/*.adoc
+LGS.slides.html: main.adoc $(DEP) LGS/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
 	asciidoctor -a icons=font -a data-uri -b dzslides -a uk \
 	-a defaultwidth=100% \
@@ -76,21 +77,21 @@ LGS.slides.html: main.adoc LGS/*.adoc
 #-----------------------------------------------------
 
 #-----------------------------------------------------
-Porte.html: main.adoc AutomaticDoor/*.adoc
+Porte.html: main.adoc $(DEP) AutomaticDoor/*.adoc
 	asciidoctor -b html5 -a fr \
 	-a caseStudy=AutomaticDoor \
 	-a caseStudyTitle="Porte Automatique [FR]" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-Porte.pdf: main.adoc AutomaticDoor/*.adoc
+Porte.pdf: main.adoc $(DEP) AutomaticDoor/*.adoc
 	asciidoctor-pdf -a toc2 -a fr \
 	-a caseStudy=AutomaticDoor \
 	-a caseStudyTitle="Porte Automatique" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-Porte.slides.html: main.adoc AutomaticDoor/*.adoc
+Porte.slides.html: main.adoc $(DEP) AutomaticDoor/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
 	asciidoctor -a icons=font -a data-uri -b dzslides -a fr \
 	-a defaultwidth=100% \
@@ -106,21 +107,21 @@ Porte.slides.html: main.adoc AutomaticDoor/*.adoc
 #-----------------------------------------------------
 
 #-----------------------------------------------------
-AutomaticDoor.html: main.adoc AutomaticDoor/*.adoc
+AutomaticDoor.html: main.adoc $(DEP) AutomaticDoor/*.adoc
 	asciidoctor -b html5 -a uk \
 	-a caseStudy=AutomaticDoor \
 	-a caseStudyTitle="Porte Automatique [FR]" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-AutomaticDoor.pdf: main.adoc AutomaticDoor/*.adoc
+AutomaticDoor.pdf: main.adoc $(DEP) AutomaticDoor/*.adoc
 	asciidoctor-pdf -a toc2 -a uk \
 	-a caseStudy=AutomaticDoor \
 	-a caseStudyTitle="Porte Automatique" \
 	-a stimulusVersion=2018.09.1 \
 	main.adoc -o $@
 
-AutomaticDoor.slides.html: main.adoc AutomaticDoor/*.adoc
+AutomaticDoor.slides.html: main.adoc $(DEP) AutomaticDoor/*.adoc
 	@echo '==> Compiling asciidoc files to generate Dzslides'
 	asciidoctor -a icons=font -a data-uri -b dzslides -a uk \
 	-a defaultwidth=100% \
