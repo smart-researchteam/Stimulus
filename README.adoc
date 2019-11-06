@@ -19,6 +19,8 @@ endif::[]
 
 WARNING: Work in progress!!
 
+WARNING: The {Argosim} company is now part of https://www.3ds.com/[Dassault System]! Some of the following lonks might be broken...
+
 == Content
 
 This repo is aggregating notes and tutorials on the {Stimulus} tool from {Argosim}. 
