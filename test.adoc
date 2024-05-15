@@ -1,0 +1,53 @@
+//---------------------------------
+// Cours MPA - version FR
+// (c) JMB - 2018
+//---------------------------------
+= **M**éthodologie de la **P**roduction d'**A**pplication – MPA (M3301)
+J.-M. Bruel <jbruel@gmail.com>
+v1.4 {localdate}
+:imagesdir: images
+//------------------------------------ variables de configuration
+// only used when master document
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:base: http://jmbruel.github.io/teaching/topics
+//:base: .
+:siteurl: {base}/mpa.html
+:bitlysiteurl: http://bit.ly/jmb-mpa
+:incremental: %step
+:discordMPA: https://discord.gg/GeWyqs6
+//--------------------- slides
+ifdef::slides[]
+:dzslides-style: tomorrow
+//:dzslides-style: stormy, watermelon, tomorrow, truffle, statement, default
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+//:dzslides-highlight: asciidoctor
+:dzslides-highlight: monokai
+:source-highlighter: highlightjs
+:dzslides-status:
+:topic: .topic
+:intro: .topic.intro
+:statement: .topic.statement
+:incremental: .incremental
+:source: .topic.source
+endif::slides[]
+ifndef::slides[]
+:topic: 
+:intro: 
+:statement: 
+:incremental: 
+:source: 
+endif::slides[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::../definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[== {nbsp}]
+
+À l'initiateur de ce cours, Jean-Michel Inglebert...
