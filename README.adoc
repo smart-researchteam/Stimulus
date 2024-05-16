@@ -17,6 +17,9 @@ endif::[]
 :us-icon: image:united-states.png[]
 :fr-icon: image:france.png[]
 
+:BPS: https://github.com/FormalRequirements/re-2024-management#BPS[Backup Power System]
+:LMS: https://github.com/FormalRequirements/re-2024-management#LMS[Library Management System]
+
 WARNING: Work in progress!!
 
 WARNING: The {Argosim} company is now part of https://www.3ds.com/[Dassault System]! Some of the following links might be broken...
@@ -29,7 +32,7 @@ NOTE: Its content only reflects on his author's understandings and expertise of 
 
 == Available tutorials
 
-In addition (and based on) the tutorial available on the {stimulus} web site: {tutorialURL}, the following tutorials are available:
+In addition (and based on) the tutorial available on the {stimulus} tool, the following tutorials are available:
 
 -  Quick Start Guide {us-icon} (
 link:{baseDocs}/QuickStartGuide.html[HTML],
@@ -43,8 +46,6 @@ link:{baseDocs}/AutomaticDoor.slides.html[SLIDES])
 link:{baseDocs}/Porte.html[HTML],
 link:{baseDocs}/Porte.pdf[PDF],
 link:{baseDocs}/Porte.slides.html[SLIDES])
-:bps: https://github.com/FormalRequirements/re-2024-management#BPS[Backup Power System]
-:lms: https://github.com/FormalRequirements/re-2024-management#LMS[Library Management System]
 
 == Current status
 
