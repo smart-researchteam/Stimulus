@@ -62,7 +62,9 @@ I am currently working on two additional tutorials based on
 
 List of contributors:
 
-- http://www.univ-tlse2.fr/accueil/formation-insertion/odf-2016-2020/master-informatique-collaborative-en-entreprise-ice--386373.kjsp[Master ICE] 2018-2019 students (figures and typos in the Automatic Door tutorial)
+- https://www.univ-tlse2.fr/accueil/formation-insertion/master-ice-ld[Master ICE] 2018-2019 students (figures and typos in the Automatic Door tutorial)
+- https://www.univ-tlse2.fr/accueil/formation-insertion/master-ice-ld[Master ICE] 2023-2024 students (details on the {BPS})
+
 
 == Credits
 
