@@ -8,7 +8,7 @@ ifdef::env-github[]
 endif::[]
 :argosimurl: https://argosim.com/
 :argosim: {argosimurl}[Argosim]
-:stimulus: https://argosim.com/product-overview/[Stimulus]
+:stimulus: https://www.3ds.com/products/catia/stimulus[Stimulus]
 :tutorialURL: https://download.argosim.com/index.php/s/5ZszF09tl0rd4gv/download
 :baseURL: https://github.com/smart-researchteam/Stimulus
 :baseDocs: https://smart-researchteam.github.io/Stimulus
@@ -19,7 +19,7 @@ endif::[]
 
 WARNING: Work in progress!!
 
-WARNING: The {Argosim} company is now part of https://www.3ds.com/[Dassault System]! Some of the following lonks might be broken...
+WARNING: The {Argosim} company is now part of https://www.3ds.com/[Dassault System]! Some of the following links might be broken...
 
 == Content
 
@@ -43,10 +43,15 @@ link:{baseDocs}/AutomaticDoor.slides.html[SLIDES])
 link:{baseDocs}/Porte.html[HTML],
 link:{baseDocs}/Porte.pdf[PDF],
 link:{baseDocs}/Porte.slides.html[SLIDES])
+:bps: https://github.com/FormalRequirements/re-2024-management#BPS[Backup Power System]
+:lms: https://github.com/FormalRequirements/re-2024-management#LMS[Library Management System]
 
 == Current status
 
-I am currently working on an additional turorial based on the LGS case study.
+I am currently working on two additional tutorials based on 
+
+- the {LGS} case study
+- the {PGS} case study
 
 == How to contribute ?
 
