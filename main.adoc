@@ -4,18 +4,33 @@
 :stimulusVersion: 2018.09.1
 = *Stimulus* Tutorial: {caseStudyTitle}
 Jean-Michel Bruel, bruel@irit.fr
-v1.0, {localdate}
-//------------- config --------
-:numbered:
-:icons: font
+v2024.1, {localdate}
+//------------------------- configuration
 :experimental:
 :imagesdir: images
+:icons: font
+:toc: left
+:numbered:
+:main:
+:doctype: book
 :defaultwidth: 80%
 :defaultwidthmenu: 40%
-:toc: left
+//:source-highlighter: highlight.js
+:source-highlighter: rouge
+:rouge-style: vs-min
+//:xrefstyle: full
+:xrefstyle: short
 ifdef::fr[:toc-title: Table des Matières]
 :xrefstyle: short
 :caution-caption: pass:[&#128161;]
+//:xrefstyle: basic
+//--------------------------- Book PDF version
+ifdef::pdf-backend[]
+//:title-page-background-image: image::cover.png[pdfwidth=60%]
+:title-logo-image: image::cover.png[align=center, pdfwidth=100%]
+//:back-cover-image: image::pegs.svg[pdfwidth=160%]
+endif::[]
+
 //--------------------- slides
 ifdef::slides[]
 :dzslides-style: tomorrow
@@ -51,10 +66,10 @@ endif::[]
 
 //------------- definitions --------
 include::definitions.adoc[]
-:argosimurl: https://argosim.com/
-:argosim: {argosimurl}[Argosim]
+:argosimurl: https://www.3ds.com
+:argosim: {argosimurl}[Dassault Systemes]
 :bruno: mailto:bruno.jofret@argosim.com[Bruno Jofret]
-:stimulus: https://argosim.com/product-overview/[Stimulus]
+:stimulus: https://www.3ds.com/products/catia/stimulus[Stimulus]
 :contact: mailto:yves.genevaux@argosim.com[Yves Genevaux]
 :tutorialURL: https://download.argosim.com/index.php/s/5ZszF09tl0rd4gv/download
 

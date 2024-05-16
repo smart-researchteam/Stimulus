@@ -3,7 +3,7 @@
 ifdef::uk[== About this tutorial]
 ifdef::fr[== À propos de ce tutoriel]
 ifdef::uk[]
-This tutorial is based on the official one from {argosim} and available here: {tutorialURL}.
+This tutorial is based on the official one from {argosim} and available on the tool (menu:File[Documentation > Tutorial]).
 
 ifdef::slides[== !]
 

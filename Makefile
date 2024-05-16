@@ -25,7 +25,7 @@ QuickStartGuide.html: main.adoc $(DEP) QuickStartGuide/*.adoc
 
 QuickStartGuide.pdf: main.adoc $(DEP) QuickStartGuide/*.adoc
 	@echo '==> Compiling asciidoc files to generate pdf'
-	asciidoctor-pdf -a toc2 -a uk \
+	asciidoctor-pdf -a toc2 -a uk -a pdf-backend \
 	-a caseStudy=QuickStartGuide \
 	-a caseStudyTitle="Quick Start Guide" \
 	-a stimulusVersion=2018.09.1 \
