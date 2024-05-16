@@ -50,8 +50,8 @@ link:{baseDocs}/Porte.slides.html[SLIDES])
 
 I am currently working on two additional tutorials based on 
 
-- the {LGS} case study
-- the {PGS} case study
+- the {LMS} case study
+- the {BPS} case study
 
 == How to contribute ?
 
