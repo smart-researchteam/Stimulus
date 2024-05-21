@@ -11,15 +11,17 @@ ifndef::slides[]
 From here, we can write requirements to describe the behaviour of the system. 
 To help you with this task, a standard library of sentence templates is provided with {stimulus}. 
 To display the standard library navigation tree, click on the btn:[Libraries] tab on top of the project navigation panel. 
-If the library is not available, open it by choosing menu:File[Open Standard Library > Stdlib] in the menu. 
-The library is then displayed as shown in <<library>>. 
-All the items of the library are organised into packages.
+
+WARNING: If the library is not available, open it by choosing menu:File[Open Standard Library > Stdlib] in the menu. 
+
+The library is then displayed as shown in the Libraries folder (see <<library>>). 
+All the items of the library are organized into packages.
 endif::slides[]
 
 //------------- img --------
 [[library]]
 ifndef::slides[.Standard library navigation tree]
-image::{stimulusVersion}/libraries.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+image::{stimulusVersion}/libraries.png[width=20%,scaledwidth=20%]
 
 
 ifndef::slides[]
@@ -33,10 +35,12 @@ ifdef::slides[=== !]
 //------------- img --------
 [[drag]]
 ifndef::slides[.Add a library item to a system]
-image::{stimulusVersion}/drag.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
+image::{stimulusVersion}/drag.png[width=60%,scaledwidth=60%]
 
 ifndef::slides[]
 TIP: {stimulus} allows you to modify its syntax, also known as `Format`, by opening its contextual menu and choosing menu:Format[x shall be in range...].
+
+TIP: To get the definition of complex operator in the library (such as `AsLongAs` for example), double click on it and you'll have the definition on the form of a state machine.
 
 To complete the sentence, we need to fill in the gaps. 
 To do so, drag and drop the port of the system directly into the first gap (see <<actuator>>).
@@ -138,7 +142,7 @@ image::{stimulusVersion}/highlighted.png[width={defaultwidthmenu},scaledwidth={d
 
 ifndef::slides[]
 The selected step is given by a vertical dotted line as shown in <<temporalsim2>>. 
-The step number is displayed in the `Current step` text field (16 in this example). 
+The step number is displayed in the `Current step` text field (19 in this example). 
 You can select the current step either by clicking in the simulation window or by typing a specific step number into the `Current step` text field.
 
 Going back to <<highlighted>>, constraints that are highlighted in solid gray are not active: at the selected step, `sensor` is false, therefore the condition in the `When` statement is not verified and the constraint is not active. 
@@ -161,7 +165,7 @@ endif::slides[]
 //------------- img --------
 [[thirdsim]]
 ifndef::slides[.Simulation with a conflict]
-image::{stimulusVersion}/thirdsim.png[width={defaultwidth},scaledwidth={defaultwidth}]
+image::{stimulusVersion}/thirdsim.png[width=100%,scaledwidth=100%]
 
 ifndef::slides[]
 Moreover, by clicking on the links provided in the error message, you are able to get to the faulty requirements.

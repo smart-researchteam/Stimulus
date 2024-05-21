@@ -4,7 +4,7 @@ ifdef::slides[:leveloffset: -1]
 [{topic}]
 === Description
 
-This exercice provides a short introduction to {stimulus}. 
+This exercise provides a short introduction to {stimulus}. 
 It explains how to create a new project and define your first system specification. 
 You will also learn how to write and simulate basic requirements, and discover the main debugging features of the tool.
 

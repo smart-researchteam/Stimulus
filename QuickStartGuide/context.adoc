@@ -1,4 +1,4 @@
 [{topic}]
 == About this tutorial
 
-This tutorial is based on the official one from {argosim} and available on the tool (menu:File[Documentation > Tutorial]).
+This tutorial is based on the official one from {argosim} and available on the tool (menu:Help[Documentation > Tutorial]).

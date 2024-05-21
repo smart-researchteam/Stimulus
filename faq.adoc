@@ -5,13 +5,13 @@ ifndef::slides[]
 == FAQ
 
 [{topic}]
-=== Where can I find more material ?
+=== Where can I find more material?
 
 https://www.argosim.com/free-trial/
 
 [[sec:simulation]]
 [{topic}]
-=== What are the different simulation parameters ?
+=== What are the different simulation parameters?
 
 //------------- img --------
 ifndef::slides[.SimulationBar]
@@ -27,7 +27,7 @@ You can change this setting before a simulation in the btn:[Properties] panel of
 Insert a simulation period using a dimension (e.g., _1 [second]_ or _10 [millisecond]_).
 
 [{topic}]
-=== How can I find a function or language construct ?
+=== How can I find a function or language construct?
 
 Select the `Library` folder and use the seach bar.
 <<search>> illustrates the search for the `when` operator.
@@ -39,7 +39,7 @@ image::recherche.png[width={defaultwidthmenu},scaledwidth={defaultwidthmenu}]
 //------------- img --------
 
 [{topic}]
-ifdef::uk[=== How can I move a port on a system ?]
+ifdef::uk[=== How can I move a port on a system?]
 ifdef::fr[=== Comment déplacer graphiquement le port d'un système ?]
 
 ifdef::uk[]
@@ -47,6 +47,23 @@ To move a port in a block diagram, maintain btn:[MAJ] (Shift) while moving the p
 endif::[]
 ifdef::fr[]
 Pour déplacer un port dans un bloc diagramme, maintenez la touche btn:[MAJ] (Shift) pendant que vous vous déplacez avec clic gauche de la souris.
+endif::[]
+
+[{topic}]
+ifdef::uk[=== How can I define a `Enum`?]
+ifdef::fr[=== Comment définir un type `Enum`?]
+
+ifdef::uk[]
+You have to create it in a glossary.
+Once the name is entered, we choose the `Enum` type.
+There is then a `+` button that appears in the Type cell (next to Enum).
+Each time you press this button, a new line appears under the name, where you can enter the label of the new Enum value.
+endif::[]
+ifdef::fr[]
+Il faut le créer un dans un glossaire. 
+Une fois le nom entré, on choisit le type `Enum`. 
+Il y a alors un bouton `+` qui apparait dans la cellule Type (à côté d'Enum). 
+Chaque fois qu'on appuie sur ce bouton, une nouvelle ligne apparait sous le nom, où on peut entrer le libellé de la nouvelle valeur de l'Enum.
 endif::[]
 
 endif::slides[]

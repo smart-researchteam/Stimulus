@@ -117,11 +117,9 @@ ifdef::uk[]
 
 NOTE: This tutorial use the version `{stimulusVersion}` of {stimulus}.
 
-. Launch the {stimulus} installer
-. Generate the number required for the licence
-. Send the email as required in order to get the licence file
+Launch {stimulus} (the installation phase should have been done by now, following the `README` file on the Google Drive).
 
-WARNING: The tool requires Windows! And no virtual machines allowed.
+WARNING: The tool requires Windows! Virtual machines might encounter problems.
 endif::[]
 
 ifdef::fr[]
@@ -130,11 +128,10 @@ ifdef::fr[]
 
 NOTE: Ce tutoriel utilise la version `{stimulusVersion}` de {stimulus}.
 
-. Lancer l'installeur {stimulus}
-. Générer le nombre requis pour obtenir la licence
-. L'envoyer par email pour obtenir le fichier de licence
+Lancer {stimulus} (la phase d'installation est considérée faite, cf. `README` dans le Google Drive).
 
-WARNING: L'outil nécessite Windows! Et les machines virtuelles ne sont pas autorisées.
+
+WARNING: L'outil nécessite Windows! Et les machines virtuelles peuvent vous poser des problèmes.
 endif::[]
 
 ifndef::slides[:leveloffset: 0]
